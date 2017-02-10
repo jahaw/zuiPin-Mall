@@ -216,6 +216,7 @@ strong,b{
 }
 
 .menu_box {
+    width:1200px;
     height:40px;
     margin:0px auto;
     position:relative;
@@ -286,6 +287,7 @@ strong,b{
 .nav_items_c {
     width:145px;
     float:left;
+    text-align: center;
 }
 
 .nav_items_c label {
@@ -293,7 +295,9 @@ strong,b{
     float:left;
     display:block;
 }
-
+.list_current {
+    background:#a0603d url(../images/nav_left_bg2.jpg) no-repeat;
+}
 .nav_items a:link,.nav_items a:visited{color:white;}
 .nav_items a:hover,.nav_items a:active {color:red;}
 
@@ -309,17 +313,19 @@ strong,b{
     color:#ffffff;
     background:#ba7b57;
     position:absolute;
+    display: none;
 }
-
+.sn_nav_tuoyuan_bg_01 {
+    background: url(../images/nav_tuoyuan_bg_01.png) no-repeat 0 2px;
+    height: 21px;
+}
 .popbox a:link,.popbox a:visited,.popbox a:hover,.popbox a:active {color:#ffffff;}
 .listbox_t,.listbox_t a:link,.listbox_t a:visited,.listbox_t a:hover,.listbox_t a:active {color:#5e341d;}
-
 .listbox {
     width:390px;
     padding:5px 10px;
     float:left;
 }
-
 .listbox_mod {
     width:390px;
     padding:5px 0px;
@@ -332,7 +338,9 @@ strong,b{
     font-weight:bold;
     float:left;
 }
-
+.listbox_t, .listbox_t a:link, .listbox_t a:visited,.listbox_t a:hover, .listbox_t a:active {
+    color: #5e341d;
+}
 .listbox_c1,.listbox_c2 {
     width:320px;
     height:auto;
@@ -400,9 +408,15 @@ strong,b{
     float:left;
     display:block;
     position:relative;
+}
+.nav_right ul li:nth-child(1){
+    background:url(../images/nav_right_c1.jpg)no-repeat;
+
+}
+.bg{
     background:url(../images/nav_right_c1.jpg)no-repeat;
 }
-
 .nav_right li a:link,.nav_right li a:visited {display:block;}
 .nav_right li a:active {color:#ffffff; text-decoration:none;}
 .nav_right li.nav_right_c a:link,.nav_right li.nav_right_c a:visited {color:#ffffff;display:block;}
+

@@ -1,0 +1,432 @@
+/*slidebg start*/
+.banner_box {
+    width:100%;
+    height:350px;
+    padding:0px;
+    margin:0px auto;
+    overflow:hidden;
+}
+#slidebg {
+    height:350px;
+    overflow:hidden;
+    width:100%;
+    clear:both;
+    margin:0px;
+    padding:0px;
+}
+.slide_box {
+    width:100%;
+    height:350px;
+    clear:both;
+}
+#slide {
+    width:1200px;
+    height:350px;
+    overflow:hidden;
+    margin:0px auto;
+    clear:both;
+    position:relative;
+}
+.slide_img {
+    padding-left:210px;
+}
+.slide a {
+    width:990px;
+    height:350px;
+    display:block;
+}
+.slide img {
+    width:990px;
+    height:350px;
+}
+.slide_bar {
+    width:auto;
+    height:50px;
+    z-index:99;
+    overflow:hidden;
+    position:absolute;
+    padding-top:11px!important;
+    padding-top:10px;
+    bottom:0px;
+    right:0px;
+    text-align:center;
+}
+
+.slide_bar .dq {
+    width:30px;
+    height:30px;
+    line-height:30px;
+    color:#ffffff;
+    text-align:center;
+    float:left;
+    background:url(../images/tea_dq1.png) no-repeat;
+    display:block;
+    margin-left:5px;
+    cursor:pointer;
+    overflow:hidden;
+    display:inline;
+}
+
+.slide_bar .no {
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    float:left;
+    background:url(../images/tea_dq2.png) no-repeat;
+    display:block;
+    margin-left:5px;
+    cursor:pointer;
+    overflow:hidden;
+    display:inline;
+}
+/*  产品展示  */
+.zuipin{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+}
+.std {
+    float: none;
+    display: block;
+    font-size: 0px;
+    height: 0px;
+    width: auto;
+    line-height: 0px;
+    min-height: 0px;
+    overflow: hidden;
+}
+.column {
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+}
+.shop_gui {
+    width:200px;
+    height:auto;
+    float:left;
+}
+/*列表项*/
+.news_mod {
+    width: 200px;
+    height: 222px;
+    margin-top: 10px;
+    background: #ffffff;
+}
+/*标题*/
+.news_mod_t {
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    background: #f3f3f3;
+    border-bottom: 2px solid #a0603d;
+    position: relative;
+}
+.news_mod_t li.cur {
+    color: #a0603d;
+    background: url(../images/news_mod_t.jpg) no-repeat;
+}
+.news_mod_t li {
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+    padding-left: 30px;
+    float: left;
+    display: block;
+}
+/*消息列表*/
+.news_mod_c {
+    width: 190px;
+    height: 160px;
+    padding: 10px 5px;
+    overflow: hidden;
+}
+.news_li {
+    width: 170px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 20px;
+    background: url(../images/news.jpg) no-repeat;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*右侧*/
+.rec_products {
+    width: 990px;
+    height: 360px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #f3f3f3;
+}
+.tabauto {
+    width: auto;
+    height: 35px;
+    line-height: 37px;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 2px solid #a0603d;
+}
+.tabauto li {
+    width: 182px;
+    height: 35px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+.tabauto li.cur {
+    width: 182px;
+    height: 35px;
+    color: #ffffff;
+    background: url(../images/tabauto_li.jpg) no-repeat;
+}
+.tab_box {
+    width: auto;
+    height: 318px;
+    overflow: hidden;
+    position: absolute;
+    overflow: hidden;
+}
+.divStart {
+    border: 3px solid #ffffff;
+}
+.rec_pro_box {
+    width: 230px;
+    height: 297px;
+    float: left;
+    background: #ffffff;
+    border: 3px solid #ffffff;
+    padding: 5px 2px 5px 3px;
+    margin: 5px 0px 0px 5px;
+    display: inline;
+}
+.lab2 {
+    background-position: -56px -86px;
+}
+.pro_lab {
+    width: 57px;
+    height: 76px;
+    right: -3px;
+    top: -5px;
+    position: absolute;
+    color: #ffffff;
+    display: block;
+    background: url(http://img3.zuipin.cn/staticimg/category/pro_lab05.png) no-repeat;
+    background-position: 0px -86px;
+}
+.pro_img{
+    width:230px;
+    height:184px;
+    position:relative;
+    background:#ffffff url(../images/imgloading.gif)no-repeat center center;
+}
+.pro_name {
+    width: 224px;
+    height: 32px;
+    line-height: 16px;
+    padding: 10px 3px 0px 3px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.m_price {
+    color: #999999;
+    float: left;
+    display: block;
+}
+.zp_price {
+    float: right;
+    display: block;
+}
+.zp_price span {
+    font-size: 20px;
+    color: #bb131b;
+    font-family: "Georgia";
+}
+.endtime {
+    width:209px;
+    height:28px;
+    padding-left:20px;
+    margin-top:10px;
+    background:#f3f3f3 url(../images/endtime.jpg) no-repeat;
+}
+
+.endtime span {
+    width:14px;
+    height:14px;
+    line-height:14px;
+    margin-top:6px;
+    float:left;
+    display:block;
+    color:#ffffff;
+    text-align:center;
+    border:1px solid #965837;
+    background:#a0603d;
+}
+
+.endtime label {
+    height:28px;
+    line-height:28px;
+    float:left;
+    display:block;
+    padding:0px 5px;
+}
+.pro_li {
+    width: 224px;
+    height: auto;
+    line-height: 25px;
+    padding: 0px 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+.p_left {
+    float: left;
+    display: block;
+}
+.red {
+    color: #bb131b;
+}
+.brown {
+    color: #a0603d;
+}
+.p_right{
+    float: right;
+    display: block;
+}
+.rec_pro_box {
+    padding: 5px 2px 5px 3px;
+    margin: 5px 0px 0px 5px;
+    display: inline;
+}
+.divStart {
+    border: 3px solid #ffffff;
+}
+.rec_pro_box {
+    width: 230px;
+    height: 297px;
+    float: left;
+    background: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+
+/*column2*/
+.tasting {
+    width:990px;
+    height:237px;
+    background:#ffffff;
+    float:left;
+    position:relative;
+}
+
+.tasting_t {
+    width:960px;
+    height:35px;
+    font-size:14px;
+    color:#a0603d;
+    padding-left:30px;
+    line-height:35px;
+    background:#f3f3f3 url(../images/tb2.jpg) no-repeat;
+    border-bottom:2px solid #a0603d;
+}
+.tasting_seq {
+    width:95px;
+    height:35px;
+    line-height:35px;
+    top:0px;
+    right:0px;
+    position:absolute;
+}
+
+.tasting_seq li {
+    width:30px;
+    height:35px;
+    float:left;
+    text-align:center;
+    display:block;
+    background:url(../images/tasting_seq1.jpg) no-repeat;
+}
+
+.tasting_seq li.cur {
+    color:#ffffff;
+    background:url(../images/tasting_seq2.jpg) no-repeat;
+}
+
+.tasting_box {
+    width:990px;
+    height:200px;
+    overflow:hidden;
+}
+.tasting_pro {
+    width:319px;
+    height:180px;
+    border-right:1px dotted #dddddd;
+    padding-left:10px;
+    margin-top:10px;
+    float:left;
+}
+.tasting_pro_l {
+    width: 188px;
+    height: 180px;
+    float: left;
+}
+.nobor {border:0px;}
+
+.tasting_pro_l {
+    width:188px;
+    height:180px;
+    float:left;
+}
+
+.tasting_pro_t {
+    width:178px;
+    height:30px;
+    padding:0px 5px;
+    line-height:30px;
+    overflow:hidden;
+}
+
+.tasting_pro_r {
+    width:123px;
+    height:180px;
+    padding:0px 5px 0px 3px;
+    float:left;
+}
+
+.tasting_pro_n {
+    color:#a0603d;
+    font-size:14px;
+}
+
+.tasting_pro_rat {
+    height:26px;
+    line-height:26px;
+    color:#bb131b;
+    position:relative;
+}
+
+.rating_box {
+    top:0px;
+    left:35px;
+    position:absolute;
+}
+
+.tasting_pro_pl {
+    width:123px;
+    height:103px;
+    overflow:hidden;
+}
+
+.tasting_pro_time {
+    color:#999999;
+}
+
+
+
