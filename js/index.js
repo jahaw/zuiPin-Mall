@@ -2,6 +2,14 @@
  * Created by Administrator on 2017/2/10 0010.
  */
 $(document).ready(function(){
+    $('.location').hover(function () {
+        $('.location').css({backgroundColor:'#ffffff'});
+        $('.loca_box').css('display','block');
+    },
+    function () {
+        $('.location').css({backgroundColor:'#ebebeb'});
+        $('.loca_box').css('display','none');
+    });
     //  下拉列表
     $('.sn-menu').hover(function(){
             $(this).find('.my-Acc').addClass('my-Accbg');
@@ -22,10 +30,10 @@ $(document).ready(function(){
     });
 
     $('.nav_right ul>li').mouseover(function(){
-        $(this).addClass('bg');
+        $(this).addClass('bg1');
     });
     $('.nav_right ul>li').mouseout(function(){
-        $(this).removeClass('bg');
+        $(this).removeClass('bg1');
     })
     $('.banner_box').attr('style','background:'+$('.slide_img').children().eq(0).attr('name'));
     $('.slide_img').children().each(function(index){
@@ -59,7 +67,14 @@ $(document).ready(function(){
             $(this).mouseover(function(){changeslide(j);stopAm();}).mouseout(function(){startAm();});
         });
         startAm();
-    //
+    //    限时抢购图片效果显示
+        $('#tabtag1').children().mouseenter(function () {
+            $(this).addClass('cur');
+            $('#tab_box>li').eq($(this).index()).animate({left:"-984px"},'slow');
+        })
+        $('#tabtag1').children().mouseleave(function () {
+            $(this).removeClass('cur');
+        })
 
 
 
