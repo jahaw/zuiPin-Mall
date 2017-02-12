@@ -19,6 +19,14 @@ $(document).ready(function(){
             $(this).find('.my-Acc').removeClass('my-Accbg');
             $(this).find('.my-Menu').hide(50);
         });
+    //购物车显示效果
+    $('.cart_t').hover(function () {
+        $('.cart_detail').show();
+    },
+    function () {
+        $('.cart_detail').hide();
+    }
+    );
     //  侧边栏显示
     $('.sn_nav').children().mouseenter(function () {
         $('.popbox').eq($(this).index()).css("display","block");
