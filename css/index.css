@@ -191,7 +191,10 @@
     height: 318px;
     overflow: hidden;
     position: absolute;
-    overflow: hidden;
+}
+.hover{
+    border:1px solid silver;
+    box-shadow:5px 5px 8px #cccccc;
 }
 .divStart {
     border: 3px solid #ffffff;
@@ -285,7 +288,7 @@
     background:#f3f3f3 url(../images/tb2.jpg) no-repeat;
     border-bottom:2px solid #a0603d;
 }
-
+/*第二排轮播图的锚点*/
 .tasting_seq {
     width:95px;
     height:35px;
@@ -309,10 +312,15 @@
     background:url(../images/tasting_seq2.jpg) no-repeat;
 }
 
-.tasting_box {
+#divImg{
     width:990px;
     height:200px;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
+}
+.tasting_box {
+    height:200px;
+    position: absolute;
 }
 .tasting_pro {
     width:319px;
@@ -321,11 +329,6 @@
     padding-left:10px;
     margin-top:10px;
     float:left;
-}
-.tasting_pro_l {
-    width: 188px;
-    height: 180px;
-    float: left;
 }
 .nobor {border:0px;}
 
@@ -498,8 +501,11 @@
     padding-top:10px;
     border-bottom:1px dotted #dddddd;
     position:relative;
+    display: none;
 }
-
+.show{
+    display: block;
+}
 .rank_block2 {
     width:30px;
     height:35px;

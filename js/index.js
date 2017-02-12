@@ -76,14 +76,99 @@ $(document).ready(function(){
         });
         startAm();
     //    限时抢购图片效果显示
-        $('#tabtag1').children().mouseenter(function () {
-            $(this).addClass('cur');
-            $('#tab_box>li').eq($(this).index()).animate({left:"-984px"},'slow');
+    $("#tabtag1 li").mouseover(function(){
+        $(this).addClass('cur').siblings().removeClass("cur");
+        $("#tabcon1 li").eq($(this).index()).css("display","block").siblings().css("display","none");
+    });
+    //记得给每个图片加动画效果哦。
+    /*$('#tabcon1 li').mouseover(function () {
+        $(this).css({border:'1px solid silver', boxShadow:'5px 5px 8px red'});
+    });*/
+
+    //手风琴的制作
+    $('.rank_t').hover(function () {
+        $('.rank_c').eq($(this).index()).show();
+    },function () {
+        $('.rank_c').eq($(this).index()).hide();
+    });
+    //内容轮播图的制作
+        $(function () {
+        var oWidth = $("#tabcon2:first").width();
+        $("#tabtag2 li").mouseover(function() {
+            var index = $(this).index();
+            i = index;
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $("#tabcon2").stop().animate({
+                left: index * oWidth * (-1) + "px"
+            });
         })
-        $('#tabtag1').children().mouseleave(function () {
-            $(this).removeClass('cur');
+        /*var timer=null;
+        var i=1;
+        function autoPlay(){
+            var oLength = $("#tabtag2 li").length;
+            timer = setInterval(function() {
+                i++;
+                if(i == (oLength + 1)) {
+                    i = 1;
+                    $("#tabcon2").css({
+                        "left": "0px"
+                    })
+                }
+                $("#tabcon2").stop().animate({
+                    left: i * oWidth * (-1) + "px"
+                });
+                $("#tabtag2").find("li").eq(i % oLength).addClass("cur").siblings().removeClass("lei");
+            }, 2000);
+        }
+        autoPlay();
+        $("#tabcon2").mouseover(function() {
+            clearInterval(timer);
+        });
+        $("#tabcon2").mouseout(function() {
+            autoPlay();
+        });*/
         })
 
+
+
+
+
+
+    //上下滚动轮播图的制作
+        var oHeight = $(".oneZuiPin_center ul li img").height();
+        $(".oneZuiPin_zero span").mouseover(function() {
+            var index = $(this).index();
+            i = index;
+            $(this).addClass("cc").siblings().removeClass("cc");
+            $(".oneZuiPin_centerLeft ul").stop().animate({
+                "top": -i* oHeight + "px"
+            });
+        })
+        var timer=null;
+        var i=0;
+        function autoPlay(){
+            var oLength = $(".oneZuiPin_zero span").length;
+            timer = setInterval(function() {
+                i++;
+                if(i>=3) {
+                    $(".oneZuiPin_centerLeft ul").css({
+                        "top":"0"
+                    })
+                    i = 0;
+                }
+                $(".oneZuiPin_centerLeft ul").stop().animate({
+                    "top": -i * oHeight
+                });
+                $(".oneZuiPin_zero span:eq("+i+")").addClass("cc").siblings().removeClass("cc");
+            }, 2000);
+        }
+        autoPlay();
+        $(".oneZuiPin_zero span").mouseover(function() {
+            clearInterval(timer);
+        });
+        $(".oneZuiPin_zero span").mouseout(function() {
+            autoPlay();
+        });
 
 
 

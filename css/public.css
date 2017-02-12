@@ -550,6 +550,10 @@ strong,b{
     border: 3px solid #ffffff;
     background: #ffffff;
 }
+.producth_box:hover{
+    border:1px solid silver;
+    box-shadow:5px 5px 8px #cccccc;
+}
 .pro_img{
     width:230px;
     height:184px;
