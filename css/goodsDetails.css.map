@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,IAAI;EACF,UAAU,EAAC,OAAO",
+"sources": ["../scss/goodsDetails.scss"],
+"names": [],
+"file": "goodsDetails.css"
+}
