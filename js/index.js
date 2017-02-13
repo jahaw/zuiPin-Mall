@@ -87,10 +87,17 @@ $(document).ready(function(){
 
     //手风琴的制作
     $('.rank_t').hover(function () {
-        $('.rank_c').eq($(this).index()).show();
+        $(this).next('.rank_c').show();
+        $('.rank_c').mouseenter(function () {
+            $(this).show();
+        });
     },function () {
-        $('.rank_c').eq($(this).index()).hide();
+        $(this).next('.rank_c').hide();
+        $('.rank_c').mouseleave(function () {
+            $(this).hide();
+        });
     });
+    $()
     //内容轮播图的制作
         $(function () {
         var oWidth = $("#divImg").width();
@@ -130,66 +137,40 @@ $(document).ready(function(){
         })
     //茶友品鉴结束
 
-    //    上下翻转轮播图
-    $(function () {
-        var oHeight=$('#div2').height();
-        var oLength=$('.index_mod_banner img').length;
-        var timer;
-        var i=0;
-        timer=setInterval(function () {
-            i++;
-            if(i=oLength){
-                i=0;
-            }
-            $('.index_mod_banner').css({top:i*oHeight*(-1)})
-        },1000);
-
-    })
-
-
-
-
-
-
-
-
     //上下滚动轮播图的制作
- /*       var oHeight = $(".oneZuiPin_center ul li img").height();
-        $(".oneZuiPin_zero span").mouseover(function() {
+        var oHeight = $("#div2").height();
+        $("#spa span").mouseover(function() {
             var index = $(this).index();
             i = index;
-            $(this).addClass("cc").siblings().removeClass("cc");
-            $(".oneZuiPin_centerLeft ul").stop().animate({
+            $(this).addClass("spa").siblings().removeClass("spa");
+            $("#div2 ul").stop().animate({
                 "top": -i* oHeight + "px"
             });
         })
         var timer=null;
         var i=0;
         function autoPlay(){
-            var oLength = $(".oneZuiPin_zero span").length;
+            var oLength = $("#div2 span").length;
             timer = setInterval(function() {
                 i++;
                 if(i>=3) {
-                    $(".oneZuiPin_centerLeft ul").css({
+                    $("#div2 ul").css({
                         "top":"0"
                     })
                     i = 0;
                 }
-                $(".oneZuiPin_centerLeft ul").stop().animate({
+                $("#div2 ul").stop().animate({
                     "top": -i * oHeight
                 });
-                $(".oneZuiPin_zero span:eq("+i+")").addClass("cc").siblings().removeClass("cc");
+                $("#spa span:eq("+i+")").addClass("spa").siblings().removeClass("spa");
             }, 2000);
         }
         autoPlay();
-        $(".oneZuiPin_zero span").mouseover(function() {
+        $("#div2 ul").mouseover(function() {
             clearInterval(timer);
         });
-        $(".oneZuiPin_zero span").mouseout(function() {
+        $("#div2 ul").mouseout(function() {
             autoPlay();
         });
-  */
-
-
-
+        //
 });
