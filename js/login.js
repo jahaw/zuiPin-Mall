@@ -1,3 +1,7 @@
-/**
- * Created by Administrator on 2017/2/13 0013.
- */
+$('#mobile').focus(function () {
+    $('.msg-wrap').show();
+})
+/*
+$('#code').blur(function () {
+    $('')
+})*/

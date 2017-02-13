@@ -66,6 +66,17 @@ em, i, b {
       line-height: 40px;
       font-size: 14px;
       font-color: #666666; }
+  .main_right .p1 {
+    width: 540px;
+    height: 30px;
+    font: 18px/30px 微软雅黑;
+    border-bottom: 3px solid #a0603d; }
+    .main_right .p1 span {
+      display: inline-block;
+      margin-left: 100px; }
+    .main_right .p1 :nth-child(2) {
+      float: right;
+      margin-right: 65px; }
 
 .phone {
   font-size: 14px; }

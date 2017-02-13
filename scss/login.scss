@@ -72,6 +72,20 @@ em, i, b {
       font-color: #666666;
     }
   }
+  .p1{
+    width:540px;
+    height:30px;
+    font:18px/30px 微软雅黑;
+    border-bottom:3px solid #a0603d;
+    span{
+      display: inline-block;
+      margin-left:100px;
+    }
+    :nth-child(2){
+      float:right;
+      margin-right:65px;
+    }
+  }
 }
 //填写手机号
 .phone {
@@ -228,3 +242,4 @@ em, i, b {
   color: white;
   font-size: 14px;
 }
+//   login 页面的样式
