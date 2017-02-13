@@ -422,13 +422,32 @@
     height:200px;
     float:left;
 }
-.index_mod_banner {
-    width:780px;
+#div2{
+    /*width:780px;
     height:200px;
     float:left;
     background:#ffffff url(../images/imgloading2.gif) no-repeat center center;
     overflow:hidden;
+    position:relative;*/
+    width: 780px;
+    height: 200px;
+    float:left;
+    overflow: hidden;
     position:relative;
+}
+
+
+.index_mod_banner {
+    width:780px;
+    height:200px;
+    /*float:left;*/
+    background:#ffffff url(../images/imgloading2.gif) no-repeat center center;
+    overflow:hidden;
+    position:absolute;
+}
+.index_mod_banner img{
+    /*position:absolute;*/
+    display: block;
 }
 .index_mod_nav1 a {
     width:105px;

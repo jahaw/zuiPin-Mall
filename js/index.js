@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
     //内容轮播图的制作
         $(function () {
-        var oWidth = $("#tabcon2:first").width();
+        var oWidth = $("#divImg").width();
         $("#tabtag2 li").mouseover(function() {
             var index = $(this).index();
             i = index;
@@ -102,14 +102,14 @@ $(document).ready(function(){
                 left: index * oWidth * (-1) + "px"
             });
         })
-        /*var timer=null;
-        var i=1;
+        var timer=null;
+        var i=0;
         function autoPlay(){
             var oLength = $("#tabtag2 li").length;
             timer = setInterval(function() {
                 i++;
-                if(i == (oLength + 1)) {
-                    i = 1;
+                if(i == oLength ) {
+                    i = 0;
                     $("#tabcon2").css({
                         "left": "0px"
                     })
@@ -117,7 +117,7 @@ $(document).ready(function(){
                 $("#tabcon2").stop().animate({
                     left: i * oWidth * (-1) + "px"
                 });
-                $("#tabtag2").find("li").eq(i % oLength).addClass("cur").siblings().removeClass("lei");
+                $("#tabtag2 li").eq(i % oLength).addClass("cur").siblings().removeClass("cur");
             }, 2000);
         }
         autoPlay();
@@ -126,8 +126,27 @@ $(document).ready(function(){
         });
         $("#tabcon2").mouseout(function() {
             autoPlay();
-        });*/
+        });
         })
+    //茶友品鉴结束
+
+    //    上下翻转轮播图
+    $(function () {
+        var oHeight=$('#div2').height();
+        var oLength=$('.index_mod_banner img').length;
+        var timer;
+        var i=0;
+        timer=setInterval(function () {
+            i++;
+            if(i=oLength){
+                i=0;
+            }
+            $('.index_mod_banner').css({top:i*oHeight*(-1)})
+        },1000);
+
+    })
+
+
 
 
 
@@ -135,7 +154,7 @@ $(document).ready(function(){
 
 
     //上下滚动轮播图的制作
-        var oHeight = $(".oneZuiPin_center ul li img").height();
+ /*       var oHeight = $(".oneZuiPin_center ul li img").height();
         $(".oneZuiPin_zero span").mouseover(function() {
             var index = $(this).index();
             i = index;
@@ -169,7 +188,7 @@ $(document).ready(function(){
         $(".oneZuiPin_zero span").mouseout(function() {
             autoPlay();
         });
-
+  */
 
 
 
