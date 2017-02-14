@@ -20,13 +20,11 @@ $(function () {
         $('.nav_details').hide();
         $('.sn_nav').hide();
     });
-
-
 //    放大镜的制作
     $('#spec_left').click(function () {
         var oLeft=$('.J_carousel_list').width();
+        $('.J_carousel_list').css({left:-oLeft});
         $('.J_carousel_list').animate({left:oLeft},500);
-        $('.J_carousel_list').css({left:0});
 
     })
 
