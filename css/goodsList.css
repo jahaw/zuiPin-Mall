@@ -175,6 +175,8 @@
       background: url(../images/sel-select1.jpg) no-repeat;
       text-decoration: none;
       color: #333333; }
+    .filter_choose .seled :hover {
+      color: #bb131b; }
 
 .px span {
   display: inline-block;
@@ -219,4 +221,4 @@ input.p_buy {
     background: #e1e1e1;
     border: 1px solid #dddddd; }
 
-/*# sourceMappingURL=goodsDetails.css.map */
+/*# sourceMappingURL=goodsList.css.map */
