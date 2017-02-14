@@ -20,6 +20,31 @@
   margin-bottom: 10px;
   position: relative;
   z-index: 1; }
+  #spec_n1 .mousetrap {
+    float: left;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    display: none; }
+  #spec_n1 .mengceng {
+    width: 245px;
+    height: 195px;
+    position: absolute;
+    background: rgba(0, 255, 255, 0);
+    display: none;
+    z-index: 999;
+    border: 1px solid red; }
+  #spec_n1 .wrap1 {
+    width: 490px;
+    height: 390px;
+    position: relative;
+    left: 500px;
+    top: -390px;
+    display: none;
+    overflow: hidden; }
+    #spec_n1 .wrap1 img {
+      position: absolute;
+      left: 0;
+      top: 0; }
 
 #spec_n2 {
   width: 490px;
@@ -37,10 +62,14 @@
   cursor: pointer; }
 
 #spec_list {
-  float: left; }
+  float: left;
+  position: relative; }
   #spec_list ul {
     height: 79px;
     overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
     zoom: 1; }
     #spec_list ul li {
       float: left;
@@ -202,9 +231,27 @@
   border-bottom: 1px dotted #dddddd;
   margin-bottom: 5px; }
 
-.detail_tabs {
-  width: auto;
-  height: auto; }
+.detail_right {
+  width: 990px;
+  float: left; }
+  .detail_right .detail_tabs {
+    width: auto;
+    height: auto; }
+
+.detail_gg {
+  padding: 5px; }
+  .detail_gg label {
+    width: 222px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    padding-left: 20px;
+    background: url(../images/detail_gg.png) no-repeat;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; }
 
 .detail_tabs_t {
   width: auto;
@@ -226,21 +273,6 @@
       height: 35px;
       line-height: 35px;
       background: url(../images/detail_tabs_t.jpg) no-repeat; }
-
-.detail_gg {
-  padding: 5px; }
-  .detail_gg label {
-    width: 222px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    float: left;
-    padding-left: 20px;
-    background: url(../images/detail_gg.png) no-repeat;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    overflow: hidden; }
 
 .detail_super {
   padding: 5px; }

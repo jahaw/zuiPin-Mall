@@ -20,6 +20,7 @@
     float: left;
   }
 }
+//   save bigPic
 #spec_n1 {
   width: 490px;
   height: 390px;
@@ -27,7 +28,42 @@
   margin-bottom: 10px;
   position: relative;
   z-index: 1;
+  //  zhezhaoceng
+  .mousetrap{
+    float:left;
+    position:absolute;
+    background:rgba(0,0,0,0.3);
+    display: none;
+  }
+  //  small xianshi
+  .mengceng{
+    width:245px;
+    height:195px;
+    position: absolute;
+    background: rgba(0,255,255,0);
+    display: none;
+    z-index:999;
+    border:1px solid red;
+    //top:0;
+    //left:0;
+  }
+  .wrap1{
+    width:490px;
+    height:390px;
+    position:relative;
+    left:500px;
+    top:-390px;
+    display: none;
+    overflow: hidden;
+    img{
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+  }
 }
+
+// save an niu  and 10 pic
 #spec_n2 {
   width: 490px;
   height: 79px;
@@ -35,6 +71,7 @@
   overflow: hidden;
   zoom: 1;
 }
+//  left anniu
 #spec_left {
   display: inline;
   width: 16px;
@@ -43,11 +80,16 @@
   float: left;
   cursor: pointer;
 }
+//  save 10 pic dev.
 #spec_list {
   float: left;
+  position: relative;
   ul {
     height: 79px;
     overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
     zoom: 1;
     li {
       float: left;
@@ -63,6 +105,7 @@
     }
   }
 }
+//  right button
 #spec_right {
   width: 16px;
   height: 78px;
@@ -70,6 +113,8 @@
   float: right;
   cursor: pointer;
 }
+
+//  right goods  introduce
 .show_right {
   margin-left: 20px;
   float: left;
@@ -238,10 +283,34 @@
   border-bottom: 1px dotted #dddddd;
   margin-bottom: 5px;
 }
-.detail_tabs {
-  width: auto;
-  height: auto;
+//  right goodsDetails
+.detail_right{
+  width:990px;
+  float:left;
+  .detail_tabs {
+    width: auto;
+    height: auto;
+  }
 }
+// 1 tabtags nav
+//  2 goods nianfen introduce
+.detail_gg {
+  padding: 5px;
+  label {
+    width: 222px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    padding-left: 20px;
+    background: url(../images/detail_gg.png) no-repeat;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+//  3 goods details big pic  --model
 .detail_tabs_t {
   width: auto;
   height: 35px;
@@ -269,22 +338,6 @@
 
 
 
-.detail_gg {
-  padding: 5px;
-  label {
-    width: 222px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    float: left;
-    padding-left: 20px;
-    background: url(../images/detail_gg.png) no-repeat;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
 .detail_super {
   padding: 5px;
 }
