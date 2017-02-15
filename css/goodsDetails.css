@@ -5,94 +5,115 @@
   .nav_details .sn_nav {
     display: none; }
 
+/*
+
+//  goodsDateils
+
 .pro_show_box {
   width: auto;
-  height: auto; }
-  .pro_show_box .show_left {
+  height: auto;
+  .show_left {
     width: 490px;
     height: auto;
-    float: left; }
-
+    float: left;
+  }
+}
+//   save bigPic
 #spec_n1 {
   width: 490px;
   height: 390px;
   text-align: center;
   margin-bottom: 10px;
   position: relative;
-  z-index: 1; }
-  #spec_n1 .mousetrap {
-    float: left;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.3);
-    display: none; }
-  #spec_n1 .mengceng {
-    width: 245px;
-    height: 195px;
-    position: absolute;
-    background: rgba(0, 255, 255, 0);
+  z-index: 1;
+  !*!/  zhezhaoceng
+  .mousetrap{
+    float:left;
+    position:absolute;
+    background:rgba(0,0,0,0.3);
     display: none;
-    z-index: 999;
-    border: 1px solid red;
-    top: 0;
-    left: 0; }
-  #spec_n1 .wrap1 {
-    width: 490px;
-    height: 390px;
-    position: relative;
-    left: 500px;
-    top: -390px;
+  }*!
+  //  small xianshi
+  .mengceng{
+    width:245px;
+    height:195px;
+    position: absolute;
+    background: rgba(0,0,0,0.3);
     display: none;
-    overflow: hidden; }
-    #spec_n1 .wrap1 img {
+    z-index:999;
+    border:1px solid red;
+    top:0;
+    left:0;
+  }
+  .wrap1{
+    width:490px;
+    height:390px;
+    position:relative;
+    left:500px;
+    top:-390px;
+    display: none;
+    overflow: hidden;
+    img{
       position: absolute;
       left: 0;
-      top: 0; }
+      top:0;
+    }
+  }
+}
 
+// save an niu  and 10 pic
 #spec_n2 {
   width: 490px;
   height: 79px;
   background: #f3f3f3;
   overflow: hidden;
-  zoom: 1; }
-
+  zoom: 1;
+}
+//  left anniu
 #spec_left {
   display: inline;
   width: 16px;
   height: 78px;
   background: url(../images/pic-btn.jpg) no-repeat;
   float: left;
-  cursor: pointer; }
-
+  cursor: pointer;
+}
+//  save 10 pic dev.
 #spec_list {
   float: left;
-  position: relative; }
-  #spec_list ul {
+  position: relative;
+  ul {
     height: 79px;
     overflow: hidden;
     position: absolute;
-    left: 0;
-    top: 0;
-    zoom: 1; }
-    #spec_list ul li {
+    left:0;
+    top:0;
+    zoom: 1;
+    li {
       float: left;
       width: 90px;
-      text-align: center; }
-      #spec_list ul li a {
+      text-align: center;
+      a {
         float: right;
         display: block;
         margin-top: 5px;
         overflow: hidden;
-        border: 2px solid #ffffff; }
-
+        border: 2px solid #ffffff;
+      }
+    }
+  }
+}
+//  right button
 #spec_right {
   width: 16px;
   height: 78px;
   background: url(../images/pic-btn.jpg) no-repeat -16px 0px;
   float: right;
-  cursor: pointer; }
-
+  cursor: pointer;
+}
+*/
 .show_right {
-  margin-left: 20px;
+  margin-left: 110px;
   float: left; }
 
 .pro_detail {
