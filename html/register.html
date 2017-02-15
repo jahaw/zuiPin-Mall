@@ -154,10 +154,10 @@
         </div>
         <div class="main_right">
             <div class="register_form">
-                <form action="http://www.zuipin.cn/customer/account/createpost/" id="register-form" method="post" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}">
+                <form action="http://127.0.0.1/php/regSave.php" id="register-form" method="post" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}">
                     <p class="phone">
                         <label>手机号码</label>
-                        <input id="mobile" name="email" placeholder="请输入手机号码" type="text" data-rule="手机号:required;mobile;" data-tip="请输入手机号"/><span id="oPhoneTips"></span>
+                        <input id="mobile" name="tel" placeholder="请输入手机号码" type="text" data-rule="手机号:required;mobile;" data-tip="请输入手机号"/><span id="oPhoneTips"></span>
                     </p>
                     <p class="message">
                         <label>短信验证码</label>
@@ -167,7 +167,7 @@
                     </p>
                     <p class="password_r">
                         <label>请设置密码</label>
-                        <input type="password" id="password" name="password" maxlength="16" data-rule="密码:required;" data-tip="密码由6-16位数字、字母组成"/><span id="testPass1"></span>
+                        <input type="password" id="password" name="pass" maxlength="16" data-rule="密码:required;" data-tip="密码由6-16位数字、字母组成"/><span id="testPass1"></span>
                     </p>
                     <p class="password_s">
                         <label>请确认密码</label>

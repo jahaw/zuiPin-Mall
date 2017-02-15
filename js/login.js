@@ -1,15 +1,15 @@
 $(function () {
     var oPhone=$('#mobile')[0];
-    var oPhoneTips=$('#phoneTips')[0];
+    var oPhoneTips=$('#oPhoneTips')[0];
     oPhone.onblur=function () {
-        oPhoneRe=/^1\d{10}$/;
+        oPhoneRe=/^1[3|4|5|8][0-9]\d{4,8}$/;
         if(oPhoneRe.test(oPhone.value)){
-            oPhoneTips.innerHTML="<font color='green'>√</font>";
+            oPhoneTips.innerHTML="<font color='green'>√"+"</font>";
             return true;
         } else {
-            oPhoneTips.innerHTML="<font color='red'>X</font>";
+            oPhoneTips.innerHTML="<font color='green'>X"+"</font>";
         }
-    }
+    };
     
     
     //加载验证码
@@ -29,18 +29,21 @@ $(function () {
 
     });
     $('#code').blur(function () {
-        if ($('#code').val()==str){
+        var oTxt=$('#code').val();
+        if (oTxt.toLowerCase()==str.toLocaleLowerCase() && oTxt!='' ){
+            $('#get-code-msg').html('');
             $('#get-code-msg').html("<font color='green'>√"+"</font>");
         }else {
             $('#get-code-msg').html("<font color='red'>X"+"</font>");
         }
-    })
+    });
 //    设置密码
     function pas(){
         var rpass=/^([0-9]|[A-Z]|[a-z]){6,12}$/;
         var pass1=$("#password").val();
         var stu=rpass.test(pass1);
-        if(true){
+        if(stu){
+            $("#testPass1")[0].innerHTML="";
             $("#testPass1")[0].innerHTML="<font color='green'>√</font>";
         }else{
             $("#testPass1")[0].innerHTML="<font color='red'>X</font>";
@@ -60,6 +63,10 @@ $(function () {
         }
     }
 
+    //填写用户名登录到首页
+    $()
 
 
-})
+
+
+});
