@@ -32,7 +32,9 @@
     background: rgba(0, 255, 255, 0);
     display: none;
     z-index: 999;
-    border: 1px solid red; }
+    border: 1px solid red;
+    top: 0;
+    left: 0; }
   #spec_n1 .wrap1 {
     width: 490px;
     height: 390px;
