@@ -17,6 +17,8 @@
     <script src="../js/slide.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/readCookie.js"></script>
 </head>
 <body>
 <!-----------------------nav开始----------------------------->
@@ -105,8 +107,9 @@
 
             </div>
             <label>您好！欢迎来到醉品商城！</label>
-            <label>[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
+            <label id="lab1">[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
             </label>
+            <span id="xs">欢迎您:</span>
         </div>
         <div class="header_right">
             <label class="sn-menu " style="position:relative;padding-right:0">

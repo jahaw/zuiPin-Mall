@@ -10,6 +10,18 @@ $(document).ready(function(){
         $('.location').css({backgroundColor:'#ebebeb'});
         $('.loca_box').css('display','none');
     });
+    //cookie存储点击列表
+    //存储cookie
+    /*function saveCookie(key, value, dayCount) {
+        var d=new Date();
+        d.setDate(d.getDate()+dayCount);
+        document.cookie=key+'='+encodeURIComponent(value)+';expires='+d.toGMTString();
+    }
+    $('.loca_box ul li').click(function () {
+         var cCks=$(this).html;
+    })*/
+
+
     //  下拉列表
     $('.sn-menu').hover(function(){
             $(this).find('.my-Acc').addClass('my-Accbg');

@@ -12,10 +12,13 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" media="all" />
     <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
     <script src="../js/slide.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/time.js"></script>
+    <script src="../js/readCookie.js"></script>
 </head>
 <body>
     <!-----------------------nav开始----------------------------->
@@ -103,9 +106,11 @@
                     </div>
 
                 </div>
+                <!--地址选取-->
                 <label>您好！欢迎来到醉品商城！</label>
-                <label>[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
+                <label id="lab1">[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
                 </label>
+                <span id="xs">欢迎您:</span>
             </div>
             <div class="header_right">
                 <label class="sn-menu " style="position:relative;padding-right:0">
@@ -139,7 +144,11 @@
     <!-- start head -->
     <div class="head">
         <div class="head_box">
-            <div class="logo"><a target="_top" href="/"><img src="../images/logo1.jpg" title="网购茶叶 茶具网上商城" alt="买茶叶、茶具上醉品商城" /></a></div>
+            <div class="logo">
+                <a target="_top" href="/">
+                    <img src="../images/logo1.jpg" title="网购茶叶 茶具网上商城" alt="买茶叶、茶具上醉品商城" />
+                </a>
+            </div>
             <div class="search">
                 <form id="search_mini_form" method="get" action="http://www.zuipin.cn/catalogsearch/result/">
                     <input type="text" value="请输入商品名称..." onfocus="if (value =='请输入商品名称...'){value =''}" onblur="if (value ==''){value='请输入商品名称...'}" name="q" class="search_input" />

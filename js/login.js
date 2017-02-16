@@ -5,9 +5,11 @@ $(function () {
         oPhoneRe=/^1[3|4|5|8][0-9]\d{4,8}$/;
         if(oPhoneRe.test(oPhone.value)){
             oPhoneTips.innerHTML="<font color='green'>√"+"</font>";
-            return true;
+            // $('#submit-btn').attr("disabled", "");
+            // return true;
         } else {
             oPhoneTips.innerHTML="<font color='green'>X"+"</font>";
+            // $('#submit-btn').attr("disabled","disabled");
         }
     };
     
@@ -33,8 +35,10 @@ $(function () {
         if (oTxt.toLowerCase()==str.toLocaleLowerCase() && oTxt!='' ){
             $('#get-code-msg').html('');
             $('#get-code-msg').html("<font color='green'>√"+"</font>");
+            // $('#submit-btn').attr("disabled", "");
         }else {
             $('#get-code-msg').html("<font color='red'>X"+"</font>");
+            // $('#submit-btn').attr("disabled","disabled");
         }
     });
 //    设置密码
@@ -43,30 +47,95 @@ $(function () {
         var pass1=$("#password").val();
         var stu=rpass.test(pass1);
         if(stu){
-            $("#testPass1")[0].innerHTML="";
-            $("#testPass1")[0].innerHTML="<font color='green'>√</font>";
+            $("#testPass1").html("");
+            $("#testPass1").html("<font color='green'>√</font>");
+            // $('#submit-btn').attr("disabled", "");
         }else{
-            $("#testPass1")[0].innerHTML="<font color='red'>X</font>";
+            $("#testPass1").html("<font color='green'>X</font>");
+            // $('#submit-btn').attr("disabled","disabled");
         }
     }
     //密码验证
     $('#password').blur(function () {
         pas();
     });
-    $("#repassword")[0].onblur=function(){
+    $("#repassword").blur(function(){
         var pass2=$("#repassword").val();
         var pass1=$("#password").val();
         if(pass2==pass1){
-            $("#testPass2")[0].innerHTML="<font color='green'>√</font>";
+            $("#testPass2").html("<font color='green'>√</font>");
+            // $('#submit-btn').attr("disabled", "");
         }else{
-            $("#testPass2")[0].innerHTML="<font color='red'>X</font>";
+            $("#testPass2").html("<font color='green'>X</font>");
+            // $('#submit-btn').attr("disabled","disabled");
         }
-    }
+    });
 
-    //填写用户名登录到首页
-    $()
+    //    我的思路：
+    //    注册时用户名通过正则验证，并且在数据库中不重复，即可登录首页。
+    $(function(){
+        /*$('#mobile').blur(function () {
+            var a = $("#mobile").val();
+            $.post("../php/regsave2.php", {"tel": $("#mobile").val()}, function (data) {
+                if(data.indexOf('1')>-1) {
+                    //    用户名存在--显示错误，并禁用点击按钮。
+                    oPhoneTips.innerHTML = "<font color='green'>X" + "</font>";
+                    // $('#submit-btn').attr("disabled", "disabled");
+
+                }else{
+                    $('#submit-btn').attr("disabled", "");
+                }
+            })
+
+        })*/
+            //1 点击按钮储存cookie,并登录到首页。
+            $("#submit-btn").click(function(){
+                // tel\pass 是与后台说好的参数。
+                $.post("../php/regsave4.php",{"tel":$("#mobile").val(),"pass":$("#password").val()},function(data){
+                    console.log(data);
+                    //查看是否接收到数据。
+                    //  问题一：返回了整个php文件地址。
+                    //  原因：打开文件的端口号出错！！！应用localhost端口。
+                    if(data.indexOf("1")>-1){
+                        //1、记录cookie;
+                        $.cookie( "tel" , $("#mobile").val()  , { path: '/', expires: 7 });
+
+
+                        //2、跳转页面,能跳转说明后台将’1‘传递回来了。
+                        location.href = "index.html";
+                        var tel = $.cookie("tel");
+                        if(tel==null){
+                            $('#lab1').show();
+                            $('#xs').hide();
+                        }else{
+                            $('#lab1').hide();
+                            $('#xs').show();
+                            $('#xs').html(tel);
+                        }
+                    }
+                });
+            });
 
 
 
 
-});
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})

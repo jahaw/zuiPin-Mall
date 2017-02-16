@@ -15,8 +15,10 @@
     <script src="../js/jquery-1.8.3.min.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/slide.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/readCookie.js"></script>
 </head>
 <body>
 <!-----------------------nav开始---------------------------->
@@ -105,8 +107,10 @@
 
             </div>
             <label>您好！欢迎来到醉品商城！</label>
-            <label>[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
+            <label id="lab1">[<span class="red" style="font-weight: 600;"><a href="login.html">登录</a></span> | <span class="red" style="font-weight: 600;"><a href="register.html">注册有礼</a></span>]
+
             </label>
+            <span id="xs">欢迎您:</span>
         </div>
         <div class="header_right">
             <label class="sn-menu " style="position:relative;padding-right:0">
@@ -154,10 +158,10 @@
         </div>
         <div class="main_right">
             <div class="register_form">
-                <form action="http://127.0.0.1/php/regSave.php" id="register-form" method="post" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}">
+                <!--<form action="http://127.0.0.1/zuiPin-Mall/php/regSave.php" id="register-form" method="post" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}">-->
                     <p class="phone">
                         <label>手机号码</label>
-                        <input id="mobile" name="tel" placeholder="请输入手机号码" type="text" data-rule="手机号:required;mobile;" data-tip="请输入手机号"/><span id="oPhoneTips"></span>
+                        <input id="mobile"  placeholder="请输入手机号码" type="text" data-rule="手机号:required;mobile;" data-tip="请输入手机号"/><span id="oPhoneTips"></span>
                     </p>
                     <p class="message">
                         <label>短信验证码</label>
@@ -167,7 +171,7 @@
                     </p>
                     <p class="password_r">
                         <label>请设置密码</label>
-                        <input type="password" id="password" name="pass" maxlength="16" data-rule="密码:required;" data-tip="密码由6-16位数字、字母组成"/><span id="testPass1"></span>
+                        <input type="password" id="password"  maxlength="16" data-rule="密码:required;" data-tip="密码由6-16位数字、字母组成"/><span id="testPass1"></span>
                     </p>
                     <p class="password_s">
                         <label>请确认密码</label>
@@ -187,10 +191,10 @@
                     </p>
                     <p class="submit_form">
                         <label></label>
-                        <input id="submit-btn" value="" type="submit" class="regi_now" />
+                        <input id="submit-btn" value="" type="button" class="regi_now" />
                     </p>
                     <input type="hidden" maxlength="30" value="" name="firstname" id="firstname">
-                </form>
+                <!--</form>-->
 
             </div>
             <div class="help_nav">
