@@ -12,14 +12,11 @@ $(document).ready(function(){
     });
     //cookie存储点击列表
     //存储cookie
-    /*function saveCookie(key, value, dayCount) {
-        var d=new Date();
-        d.setDate(d.getDate()+dayCount);
-        document.cookie=key+'='+encodeURIComponent(value)+';expires='+d.toGMTString();
-    }
-    $('.loca_box ul li').click(function () {
-         var cCks=$(this).html;
-    })*/
+    $(".ul1 li").click(function () {
+        var txt=$(this).text();
+        //mem_loca 存储地址的cookie
+        $.cookie( "mem_loca" , txt  , { path: '/', expires: 7 });
+    });
 
 
     //  下拉列表

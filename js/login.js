@@ -74,20 +74,23 @@ $(function () {
     //    我的思路：
     //    注册时用户名通过正则验证，并且在数据库中不重复，即可登录首页。
     $(function(){
-        /*$('#mobile').blur(function () {
+        $('#mobile').blur(function () {
             var a = $("#mobile").val();
             $.post("../php/regsave2.php", {"tel": $("#mobile").val()}, function (data) {
                 if(data.indexOf('1')>-1) {
                     //    用户名存在--显示错误，并禁用点击按钮。
+                    oPhoneTips.innerHTML = "";
                     oPhoneTips.innerHTML = "<font color='green'>X" + "</font>";
                     // $('#submit-btn').attr("disabled", "disabled");
 
                 }else{
+                    oPhoneTips.innerHTML = "";
+                    oPhoneTips.innerHTML = "<font color='green'>√" + "</font>";
                     $('#submit-btn').attr("disabled", "");
                 }
             })
 
-        })*/
+        })
             //1 点击按钮储存cookie,并登录到首页。
             $("#submit-btn").click(function(){
                 // tel\pass 是与后台说好的参数。
