@@ -184,5 +184,36 @@ $(document).ready(function(){
         $("#div2 ul").mouseout(function() {
             autoPlay();
         });
-        //
-});
+        //回到顶部制作
+        $(function () {
+            var bSys=true;
+            var timer=null;
+            window.onscroll=function () {
+                if(!bSys){//非系统操作
+                    clearInterval(timer);
+                }
+                bSys=false;//系统操作规定为false
+            };
+            $('#toTop').click(function () {
+                timer = setInterval(function () {
+                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    //前者适用ie浏览器，后者适用ff浏览器
+                    var iSpeed = Math.floor(0 - scrollTop / 8);
+                    <!--向下取整-->
+                    console.log(iSpeed);
+                    if (scrollTop == 0) {
+                        clearInterval(timer);//关闭定时器
+                    }
+                    bSys = true;
+                    document.documentElement.scrollTop = document.body.scrollTop = scrollTop + iSpeed;
+                }, 20)
+            })
+            })
+
+
+
+
+    })
+
+
+

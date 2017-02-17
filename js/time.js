@@ -7,7 +7,7 @@ $(function(){
     setInterval(function(){
       $(".endtime").each(function(){
         var obj = $(this);
-        var endTime = new Date(parseInt(obj.attr('value')) * 1000);
+        var endTime = new Date(parseInt(obj.attr('value')) * 10000);
         var nowTime = new Date();
         var nMS=endTime.getTime() - nowTime.getTime() + difference;
         var myD=Math.floor(nMS/(1000 * 60 * 60 * 24)) % 3;

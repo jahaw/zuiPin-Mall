@@ -1,7 +1,26 @@
 /**
  * Created by an.han on 13-12-17.
  */
+
+
+
+
+
+
 window.onload = function () {
+    //鼠标移入显示二级菜单
+
+    $('#popnav').mouseenter(function () {
+        $('.nav_details').show();
+        $('.sn_nav').show();
+    });
+    $('#popnav').mouseleave(function () {
+        $('.nav_details').hide();
+        $('.sn_nav').hide();
+    });
+
+
+
     if (!document.getElementsByClassName) {
         document.getElementsByClassName = function (cls) {
             var ret = [];
@@ -167,7 +186,8 @@ window.onload = function () {
     checkAllInputs[0].checked = true;
     checkAllInputs[0].onclick();
 };
-/*$(function(){
+/*
+$(function() {
 
     //鼠标移入显示二级菜单
 
@@ -178,4 +198,5 @@ window.onload = function () {
     $('#popnav').mouseleave(function () {
         $('.nav_details').hide();
         $('.sn_nav').hide();
-});*/
+    });
+})*/
