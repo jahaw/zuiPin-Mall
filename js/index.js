@@ -15,7 +15,10 @@ $(document).ready(function(){
     $(".ul1 li").click(function () {
         var txt=$(this).text();
         //mem_loca 存储地址的cookie
+        $('#mem_loca').text(txt);
         $.cookie( "mem_loca" , txt  , { path: '/', expires: 7 });
+        location.href="index.html";
+    //    存在问题：点击数据之后应该从新加载页面！！！
     });
 
 
