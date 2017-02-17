@@ -1,4 +1,5 @@
 		<?php
+            // 用户名的验证
 			header("content-type","text/html;charset=utf-8");
 			//1、接受客户端的数据（用户输入的数据）
 			$tel = $_REQUEST['tel'];
@@ -22,5 +23,6 @@
 					echo "1";
 				}
 			//3、给客户端返回（响应）一个注册成功！
+
 			
 		?>

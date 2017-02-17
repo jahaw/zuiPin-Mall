@@ -72,26 +72,27 @@ $(function () {
     });
 
     //    我的思路：
-    //    注册时用户名通过正则验证，并且在数据库中不重复，即可登录首页。
+    //    1 先验证、注册时用户名通过正则验证，并且在数据库中不重复，即可登录首页。
     $(function(){
         $('#mobile').blur(function () {
             var a = $("#mobile").val();
-            $.post("../php/regsave2.php", {"tel": $("#mobile").val()}, function (data) {
-                if(data.indexOf('1')>-1) {
-                    //    用户名存在--显示错误，并禁用点击按钮。
+            $.post("../php/regSave2.php", {"tel": $("#mobile").val()}, function (data) {
+                console.log(data);
+                if(data==0) {
+                    // 用户名存在--显示错误，并禁用点击按钮。
                     oPhoneTips.innerHTML = "";
-                    oPhoneTips.innerHTML = "<font color='green'>X" + "</font>";
+                    oPhoneTips.innerHTML = "<font color='green'>√" + "</font>";
                     // $('#submit-btn').attr("disabled", "disabled");
 
                 }else{
                     oPhoneTips.innerHTML = "";
-                    oPhoneTips.innerHTML = "<font color='green'>√" + "</font>";
-                    $('#submit-btn').attr("disabled", "");
+                    oPhoneTips.innerHTML = "<font color='green'>X" + "</font>";
+                    // $('#submit-btn').attr("disabled", "");
                 }
             })
 
-        })
-            //1 点击按钮储存cookie,并登录到首页。
+        });
+            //2 点击按钮储存cookie,并登录到首页。
             $("#submit-btn").click(function(){
                 // tel\pass 是与后台说好的参数。
                 $.post("../php/regsave4.php",{"tel":$("#mobile").val(),"pass":$("#password").val()},function(data){
@@ -119,6 +120,39 @@ $(function () {
                 });
             });
 
+        //   login in 登录
+
+
+        $(function(){
+            $(".submit_form").click(function(){
+                var sendData = {"tel":$("#mobile").val(),"pass":$("#password").val()};
+                console.log(sendData);
+                $.ajax({
+                    type:"post",
+                    url:"../php/login.php",
+                    async:true,
+                    data:sendData,
+                    error:function(XMLHttpRequest, textStatus, errorThrown){
+                        alert(errorThrown);
+                    },
+                    success:function(data){
+
+                        if(data.indexOf("1")>-1){
+                            // alert('keyi')
+                            //1、记录cookie;
+                            $.cookie( "tel" , $("#mobile").val()  , { path: '/', expires: 7 });
+
+                            //2、跳转页面；
+                            location.href = "index.html";
+                        }else{
+                            alert("用户名或密码错误");
+                            //console.log(0)
+                        }
+                    }
+                });
+
+            });
+        });
 
 
 

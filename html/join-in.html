@@ -31,12 +31,12 @@
                     <ul>
                         <li class="loca_item">
                             <span></span>
-                            <div><ul><li><em value="100">全国</em></li></ul></div>
+                            <div><ul class="ul1"><li><em value="100">全国</em></li></ul></div>
                         </li>
                         <li class="loca_item">
                             <span>A-C</span>
                             <div>
-                                <ul>
+                                <ul class="ul1">
                                     <li><em value="323">安徽</em></li>
                                     <li><em value="345">澳门</em></li>
                                     <li><em value="312">北京</em></li>
@@ -47,7 +47,7 @@
                         <li class="loca_item">
                             <span>F-H</span>
                             <div>
-                                <ul>
+                                <ul class="ul1">
                                     <li><em value="324">福建</em></li>
                                     <li><em value="330">广东</em></li>
                                     <li><em value="331">广西</em></li>
@@ -65,7 +65,7 @@
                         <li class="loca_item">
                             <span>J-N</span>
                             <div>
-                                <ul>
+                                <ul class="ul1">
                                     <li><em value="321">江苏</em></li>
                                     <li><em value="318">吉林</em></li>
                                     <li><em value="325">江西</em></li>
@@ -78,7 +78,7 @@
                         <li class="loca_item">
                             <span>Q-T</span>
                             <div>
-                                <ul>
+                                <ul class="ul1">
                                     <li><em value="340">青海</em></li>
                                     <li><em value="320">上海</em></li>
                                     <li><em value="326">山东</em></li>
@@ -93,7 +93,7 @@
                         <li class="loca_item">
                             <span>X-Z</span>
                             <div>
-                                <ul>
+                                <ul class="ul1">
                                     <li><em value="337">西藏</em></li>
                                     <li><em value="344">香港</em></li>
                                     <li><em value="342">新疆</em></li>
@@ -819,276 +819,16 @@
 <!-----------------------slidebg end------------------------------>
 <!--购物车展示-->
 <div class="container">
-    <div class="std"><link rel="stylesheet" href="//img0.zuipin.cn/img/cms/20161124zs/lb1/swiper-3.4.0.min.css">
+    <div class="std">
+        <!--<link rel="stylesheet" href="//img0.zuipin.cn/img/cms/20161124zs/lb1/swiper-3.4.0.min.css">
         <link rel="stylesheet" href="//img0.zuipin.cn/img/cms/20161124zs/lb1/carousel.css?1">
         <script src="//img0.zuipin.cn/img/cms/20161124zs/lb1/swiper-3.4.0.jquery.min.js"></script>
         <script src="//img0.zuipin.cn/img/cms/20161124zs/lb1/carousel.js"></script>
-        <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-        <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
-        <style>
-            body{
-                margin: 0;
-                padding:0;
-            }
-            #mobile-error{
-                position: absolute;
-                color:#fff;
-            }
-            .allcontent{
-                width: 100%;
-                min-width: 1200px;
-                overflow: hidden;
-            }
-            .content{
-                margin: 0 auto;
-                position: relative;
-                left: 50%;
-                margin-left: -960px;
-            }
-            .xr_link{
-                width: 100%;
-                height: 100%;
-                position: relative;
-            }
-            .link1{
-                position: absolute;
-                width: 236px;
-                height: 356px;
-            }
-            .xr_link a{
-                position: absolute;
-                /*background:url(about:blank);*/
-            }
-            #right {
-
-                position: fixed;
-                top: 62px;
-                z-index: 999;
-                overflow: hidden;
-            }
-            .rightx_left{
-                background: url("//img0.zuipin.cn/img/cms/20161124zs/right_nav.png") no-repeat scroll center top transparent;
-                left: 0px;
-            }
-            .rightx{
-                -webkit-transform:scale(0.01, 0.01);
-                -moz-transform:scale(0.01, 0.01);
-                -o-transform:scale(0.01, 0.01);
-                -ms-transform:scale(0.01, 0.01);
-                transform:scale(0.01, 0.01);
-                -webkit-transition:all 400ms linear 0s;
-                -moz-transition:all 400ms linear 0.1s;
-                -o-transition:all 400ms linear 0.1s;
-                -ms-transition:all 400ms linear 0;
-                transition:all 400ms linear 0s;
-                width:0px;
-                height:0px;
-            }
-            .rightxa1{
-                position: absolute;
-                left: 16px;
-                width: 165px;
-                height: 34px;
-            }
-            .top{
-                width: 90px;
-                height: 50px;
-                left: 70px;
-            }
-            .rightx_hover {
-                visibility:visible;
-                -webkit-transform:scale(1);
-                -moz-transform:scale(1);
-                /*-o-transform:scale(1));*/
-                -ms-transform:scale(1);
-                transform:scale(1);
-                -webkit-transition:1s;
-                -moz-transition:1s;
-                -o-transition:1s;
-                -ms-transition:1s;
-                transition:1s;
-                display:block;
-                width:190px;
-                height:492px;
-            }
-            .close{
-                position: absolute;
-                width: 29px;
-                height: 29px;
-                right: 0;
-                top: 12px;
-                cursor: pointer;
-            }
-            /* img */
-            .xr_img{
-                width: 100%;
-                height: 100%;
-            }
-            .xr_img img{
-                display: block;
-            }
-            .btn_list{
-                position: absolute;
-                left: 50%;
-                top: 9560px;
-                width: 800px;
-                margin-left: -400px;
-            }
-            .in{
-                font-family: "Microsoft yahei";
-                font-size: 15px;
-                width: 30%;
-                float: left;
-                margin-right: 40px;
-            }
-            .in input{
-                height: 30px;
-                width: 100%;
-                font-size: 15px;
-                border-radius: 5px;
-                border: none;
-                padding-left: 10px;
-            }
-            .in span{
-                display: block;
-                width: 100%;
-            }
-            .in_textarea{
-                margin-top: 20px;
-
-            }
-            .in_textarea span{
-                display: block;
-                font-family: "Microsoft yahei";
-                font-size: 15px;
-                width: 100%;
-            }
-            .in_textarea textarea{
-                margin-top:10px;
-                width: 100%;
-                resize:none;
-                font-size: 15px;
-                border-radius: 5px;
-                padding-top: 10px;
-                padding-left: 10px;
-            }
-            .clear{
-                clear: both;
-            }
-            .btn{
-                padding: 12px 70px;
-                border:none;
-                outline: none;
-                cursor: pointer;
-                background-color: #0f85ef;
-                color: #fff;
-                font-size: 18px;
-                border-radius: 5px;
-                display: block;
-                margin: 0 auto;
-                margin-top: 36px;
-            }
-            #lb2{
-                position: absolute;
-                width: 975px;
-                height: 822px;
-                left: 477px;
-                top: 8046px;
-                z-index: 9999;
-            }
-            #lb1{
-                position: absolute;
-                left: 286px;
-                top: 1623px;
-            }
-            .swiper-pagination{
-                background: url(//img0.zuipin.cn/img/cms/20161124zs/lb/line.png) no-repeat center;
-                display: inline-block;
-                text-align: left;
-            }
-            .swiper-pagination span{
-                text-align: left;
-                display: inline-block;
-                cursor: pointer;
-            }
-            .swiper-pagination-bullet{
-                background: url(//img0.zuipin.cn/img/cms/20161124zs/lb/aa2.png) no-repeat;
-                width: 35px !important;
-                height: 59px !important;
-                opacity: 1 !important;
-            }
-            .swiper-pagination-bullet:nth-child(1):after{
-                content: "太原";
-                width: 40px;
-                display: inline-block;
-                margin-top: 40px;
-                font-family:"Noto Sans CJK SC", "Source Han Sans CN";
-                font-weight: bold;
-                color:#9d9d9d;
-                margin-left: 3px;
-                font-size: 14px;
-            }
-            .swiper-pagination-bullet:nth-child(2):after{
-                content: "西安";
-                width: 40px;
-                display: inline-block;
-                margin-top: 40px;
-                font-weight: bold;
-                font-size: 14px;
-                margin-left: 3px;
-                font-family:"Noto Sans CJK SC", "Source Han Sans CN";
-                color:#9d9d9d;
-            }
-
-            .swiper-pagination-bullet:nth-child(3):after{
-                content: "郑州";
-                width: 40px;
-                font-weight: bold;
-                display: inline-block;
-                margin-top: 40px;
-                font-size: 14px;
-                margin-left: 3px;
-                font-family:"Noto Sans CJK SC", "Source Han Sans CN";
-                color:#9d9d9d;
-            }
-            .swiper-pagination-bullet:nth-child(4):after{
-                content: "济南";
-                width: 40px;
-                font-weight: bold;
-                display: inline-block;
-                margin-top: 40px;
-                font-size: 14px;
-                margin-left: 3px;
-                font-family:"Noto Sans CJK SC", "Source Han Sans CN";
-                color:#9d9d9d;
-            }
-            .swiper-pagination-bullet-active:after{
-                color:#2f8bef !important;
-            }
-            .swiper-pagination-bullet-active{
-                background: url(//img0.zuipin.cn/img/cms/20161124zs/lb/aa1.png) no-repeat !important;
-            }
-            .top_nav{
-                position: absolute;
-                left: 459px;
-                width: 1000px;
-                height: 52px;
-            }
-            .top_nav a{
-                position: absolute;
-                display: inline-block;
-                margin: 0;
-                width: 100px;
-                height: 52px;
-                cursor: pointer;
-            }
-        </style>
-
-
+        <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></cript>
+        <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>-->
         <div class="allcontent">
             <div class="content">
                 <div class="xr_link">
-
                     <!-- 定位 -->
                     <div id="qj01" style="top: 1379px;position: absolute"></div>
                     <div id="qj02" style="top: 2070px;position: absolute"></div>
@@ -1360,16 +1100,7 @@
                 <button class="btn" type="submit" id="subbtn">提交申请</button>
             </form>
         </div>
-
-        <div id="xbox" class="ui-xbox" style="display:none">
-            <div class="ui-xbox-action">
-                <a class="ui-xboxTit">温馨提示</a>
-                <a class="xboxClose" href="javascript:void(0)" onclick="resetClick()">关闭</a>
-            </div>
-            <br>
-            <hr>
-            <div class="ui-xbox-content">
-                <div class="ui-cont1">内容</div>
+</div>
             </div>
         </div>
         <div id="user_loading" style="display:none;"><div class="user_loading">加载中...，请稍等！</div></div>
