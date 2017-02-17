@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83f233e5-a16b-47da-92d5-147828eaaeb9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lj.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lj1.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shoppingCar.css" afterPath="$PROJECT_DIR$/css/shoppingCar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/shoppingCar.css.map" afterPath="$PROJECT_DIR$/css/shoppingCar.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/shoppingCar.html" afterPath="$PROJECT_DIR$/html/shoppingCar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/login.js" afterPath="$PROJECT_DIR$/js/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/readCookie.js" afterPath="$PROJECT_DIR$/js/readCookie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/shoppingCar.scss" afterPath="$PROJECT_DIR$/scss/shoppingCar.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
@@ -67,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readCookie.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readCookie.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/readCookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="57">
+              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="e#0#54#0" expanded="false" />
               </folding>
@@ -82,8 +73,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -436,7 +427,7 @@
       <workItem from="1487171966462" duration="4921000" />
       <workItem from="1487205893979" duration="36758000" />
       <workItem from="1487255223641" duration="4261000" />
-      <workItem from="1487291890573" duration="15010000" />
+      <workItem from="1487291890573" duration="15602000" />
     </task>
     <task id="LOCAL-00001" summary="create new file 2017-2-13">
       <created>1486951984705</created>
@@ -557,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487297789272</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="地址栏地址的存储  13：01   2017-2-17">
+      <created>1487309234543</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1487309234543</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192228000" />
+    <option name="totallyTimeSpent" value="192820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -635,7 +633,8 @@
     <MESSAGE value="专题活动的介绍   0：01   2017-2-15" />
     <MESSAGE value="登录注册的制作   20：01   2017-2-16" />
     <MESSAGE value="回到顶部的制作  20：01   2017-2-16" />
-    <option name="LAST_COMMIT_MESSAGE" value="回到顶部的制作  20：01   2017-2-16" />
+    <MESSAGE value="地址栏地址的存储  13：01   2017-2-17" />
+    <option name="LAST_COMMIT_MESSAGE" value="地址栏地址的存储  13：01   2017-2-17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1008,9 +1007,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/readCookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#54#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,16 +1051,6 @@
             <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#a#6;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#6;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/readCookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#54#0" expanded="false" />
           </folding>
         </state>
       </provider>

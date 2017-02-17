@@ -3,9 +3,12 @@
  */
 $(function () {
     //读取存储的地址
-    var oTxt=$.cookie('txt');
+    var oTxt=$.cookie('mem_loca');
+    console.log(oTxt);
+    //未取到值？？？
     if(oTxt==null){
-        $('#mem_loca').html("全国");
+        // $('#mem_loca').html("全国");
+
     }else{
         $('#mem_loca').html(oTxt);
     }
