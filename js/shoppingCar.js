@@ -180,23 +180,10 @@ window.onload = function () {
             alert('请选择商品！');
         }
         getTotal(); //更新总数
-    }
+    };
 
     // 默认全选
     checkAllInputs[0].checked = true;
     checkAllInputs[0].onclick();
 };
-/*
-$(function() {
 
-    //鼠标移入显示二级菜单
-
-    $('#popnav').mouseenter(function () {
-        $('.nav_details').show();
-        $('.sn_nav').show();
-    });
-    $('#popnav').mouseleave(function () {
-        $('.nav_details').hide();
-        $('.sn_nav').hide();
-    });
-})*/
