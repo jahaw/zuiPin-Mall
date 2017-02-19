@@ -2,10 +2,10 @@
  * Created by Administrator on 2017/2/16 0016.
  */
 $(function () {
-    //读取存储的地址
+    //read cookie
     var oTxt=$.cookie('mem_loca');
     console.log(oTxt);
-    //未取到值？？？
+    //value="";
     if(oTxt==null){
         // $('#mem_loca').html("全国");
 
@@ -14,7 +14,7 @@ $(function () {
     }
 
 
-    //读取存取的用户名
+    //read userName
     var tel = $.cookie("tel");
     if(tel==null){
         $('#lab1').show();

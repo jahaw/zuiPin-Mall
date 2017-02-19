@@ -12,19 +12,23 @@
 			mysql_select_db("shoppingcenter",$conn);
 
 			//3）、查询数据（过桥）
-			$sqlstr = "select * from vipinfo where
-            tel='".$userName."' and pass='".$userPass."'" ;
-			$result = mysql_query($sqlstr,$conn);
+//			$sqlstr = "select * from vipinfo where tel='".$tel."' and vipPass='".$userPass."'" ;
+//			$result = mysql_query($sqlstr,$conn);
             //执行查询sql语句后，有返回值，返回的是查询结果。
-			$query_num =mysql_num_rows($result);
+//          $query_num =mysql_num_rows($result);
+
+            $sqlstr = "select * from vipinfo where tel='".$tel."'";
+            $result = mysql_query($sqlstr,$conn);
+            $query_num =mysql_num_rows($result);
+            $sqlstr = "select * from vipinfo where vipPass='".$userPass."'";
+            $result = mysql_query($sqlstr,$conn);
+            $query_pass =mysql_num_rows($result);
 			//4）、关闭连接（拆桥）
-			mysql_close($conn);
-				if($query_num==0){
-					echo "0";
-				}else{
-					echo "1";
-				}
-			//3、给客户端返回（响应）一个注册成功！
-
-
+                if($query_num!=0 && $query_pass!=0 && $query_num==$query_pass){
+                    echo "1";
+                // 通过验证，可以验证。
+                }else{
+                    echo "0";
+                }
+                mysql_close($conn);
 		?>

@@ -1,3 +1,4 @@
+		<meta charset="UTF-8">
 		<?php
             // 用户名的验证
 			header("content-type","text/html;charset=utf-8");
@@ -16,12 +17,15 @@
 			$result = mysql_query($sqlstr,$conn);
 			$query_num =mysql_num_rows($result);
 			//4）、关闭连接（拆桥）
-			mysql_close($conn);
+
 				if($query_num==0){
 					echo "0";
+                //没有该用户名
 				}else{
+                //该用户名已存在
 					echo "1";
 				}
+				mysql_close($conn);
 			//3、给客户端返回（响应）一个注册成功！
 
 			
