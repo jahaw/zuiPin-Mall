@@ -12,9 +12,10 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css" media="all" />
     <link rel="stylesheet" type="text/css" href="../css/index.css" media="all" />
     <!--<link rel="stylesheet" type="text/css" href="../css/goodsDetails.css"/>-->
-    <link rel="stylesheet" type="text/css" href="../css/shoppingCar.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../css/shoppingCar.css"/>-->
     <script src="../js/jquery-1.8.3.min.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/slide.js"></script>
     <script src="../js/shoppingCar.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/jquery.cookie.js"></script>
@@ -31,7 +32,14 @@
                     <ul>
                         <li class="loca_item">
                             <span></span>
-                            <div><ul class="ul1"><li><em value="100">全国</em></li></ul></div>
+                            <div>
+                                <ul class="ul1">
+                                    <li>
+                                        <em value="100">全国</em>
+                                    </li>
+                            </ul>
+                            </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>A-C</span>
@@ -43,6 +51,7 @@
                                     <li><em value="333">重庆</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>F-H</span>
@@ -61,6 +70,7 @@
                                     <li><em value="329">湖南</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>J-N</span>
@@ -74,6 +84,7 @@
                                     <li><em value="341">宁夏</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>Q-T</span>
@@ -89,6 +100,7 @@
                                     <li><em value="313">天津</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>X-Z</span>
@@ -101,6 +113,8 @@
                                     <li><em value="322">浙江</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
+
                         </li>
                     </ul>
                 </div>
@@ -815,382 +829,39 @@
     </div>
 </div>
 <!--------------------------end menu--------------------------------->
+<div class="banner_box">
+    <div id="slidebg">
+        <div class="slide_box">
+            <div id="slide">
+                <div class="slide_img">
+                    <a rel="nofollow" name="#ed2210" target="_blank" href="http://www.zuipin.cn/20170203yx.html">
+                        <img src="../images/1.jpg" alt=""  width="990" height="350" />
+                    </a>
 
+                    <a rel="nofollow" name="#569600" target="_blank" href="http://www.zuipin.cn/20170209xk.html">
+                        <img src="../images/2.jpg" alt=""  width="990" height="350" />
+                    </a>
+
+
+                    <a rel="nofollow" name="#000" target="_blank" href="http://www.zuipin.cn/20170112mjg.html">
+                        <img src="../images/3.jpg" alt=""  width="990" height="350" />
+                    </a>
+
+
+                    <a rel="nofollow" name="#5e0000" target="_blank" href="http://www.zuipin.cn/8683727.html">
+                        <img src="../images/4.jpg" alt=""  width="990" height="350" />
+                    </a>
+                    <a rel="nofollow" name="#150000" target="_blank" href="http://www.zuipin.cn/8684038.html">
+                        <img src="../images/5.jpg" alt=""  width="990" height="350" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-----------------------slidebg end------------------------------>
+
 <!--购物车展示-->
-<div class="container">
-    <div class="std">
-        <div class="allcontent">
-            <div class="content">
-                <div class="xr_link">
-                    <!-- 定位 -->
-                    <div id="qj01" style="top: 1379px;position: absolute"></div>
-                    <div id="qj02" style="top: 2070px;position: absolute"></div>
-                    <div id="qj03" style="top: 2918px;position: absolute"></div>
-                    <div id="qj04" style="top: 3623px;position: absolute"></div>
-                    <div id="qj05" style="top: 4629px;position: absolute"></div>
-                    <div id="qj06" style="top: 5233px;position: absolute"></div>
-                    <div id="qj07" style="top: 5926px;position: absolute"></div>
-                    <div id="qj08" style="top: 6729px;position: absolute"></div>
-                    <div id="qj09" style="top: 7774px;position: absolute"></div>
-                    <div id="qj10" style="top: 8774px;position: absolute"></div>
-                    <div id="top" style="top: 0;position: absolute"></div>
-                    <!-- 轮播 -->
-                    <div class="top_nav" style="top:1400px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:2099px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:2949px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:3649px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:4649px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:5249px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:5948px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:6748px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:7799px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div class="top_nav" style="top:8794px;">
-                        <a style="left:0px" rel="qj01"></a>
-                        <a style="left:100px" rel="qj02"></a>
-                        <a style="left:200px" rel="qj03"></a>
-                        <a style="left:300px" rel="qj04"></a>
-                        <a style="left:400px" rel="qj05"></a>
-                        <a style="left:500px" rel="qj06"></a>
-                        <a style="left:600px" rel="qj07"></a>
-                        <a style="left:700px" rel="qj08"></a>
-                        <a style="left:800px" rel="qj09"></a>
-                        <a style="left:900px" rel="qj10"></a>
-                    </div>
-                    <div id="lb1">
-                        <div class="J_Poster poster-main" data-setting="{&quot;autoPlay&quot;:true,&quot;delay&quot;:2000,&quot;speed&quot;:300,&quot;scale&quot;:0.8}" style="width: 1350px; height: 426px;">
-                            <div class="poster-btn poster-prev-btn" style="width: 225px; height: 426px; z-index: 4;"></div>
-                            <ul class="poster-list" style="width: 1350px; height: 426px;">
-                                <li class="poster-item" style="width: 461px; height: 204px; left: 0px; top: 111px; z-index: 0; opacity: 0.333333;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_1.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 1; width: 576px; height: 255px; opacity: 0.5; left: 75px; top: 85.5px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_2.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 2; width: 720px; height: 318px; opacity: 1; left: 150px; top: 53.625px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_3.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 3; width: 900px; height: 400px; opacity: 1; left: 225px; top: 0px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_4.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 2; width: 720px; height: 320px; opacity: 1; left: 480px; top: 53px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_5.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 1; width: 576px; height: 256px; opacity: 0.5; left: 699px; top: 85px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_6.png" width="100%" height="100%">
-                                </a></li>
-                                <li class="poster-item" style="z-index: 0; width: 461px; height: 204px; opacity: 0.333333; left: 889.2px; top: 110.6px;"><a href="javascript:;">
-                                    <img src="//img0.zuipin.cn/img/cms/20161124zs/lb/lb2_7.png" width="100%" height="100%">
-                                </a></li>
-                            </ul>
-                            <div class="poster-btn poster-next-btn" style="width: 225px; height: 426px; z-index: 4;"></div>
-                        </div>
-                    </div>
-                    <div id="lb2" class="swiper-container swiper-container-horizontal">
-                        <div class="swiper-wrapper" style="transform: translate3d(-3900px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/jn.jpg"></div>
-                            <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/ty.jpg"></div>
-                            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/xa.jpg"></div>
-                            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/zz.jpg"></div>
-                            <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/jn.jpg"></div>
-                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 975px;"><img src="//img0.zuipin.cn/img/cms/20161124zs/lb/ty.jpg"></div></div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
-                    </div>
-
-                </div>
-                <div class="xr_img">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_01.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_02.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_03.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_04.jpg?1">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_05.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_06.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_07.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_08.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_09.jpg?1">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_10.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_11.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_12.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_13.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_14.jpg?1">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_15.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_16.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_17.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_18.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_19.jpg?1">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_20.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_21.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_22.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_23.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_24.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_25.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner1_26.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_27.jpg?1">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner1_28.jpg?1">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner1_29.jpg?1">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner1_30.jpg?1">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner1_31.jpg?1">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_01.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_02.jpg?2">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner2_03.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_04.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_05.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_06.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_07.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_08.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_09.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_10.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_11.jpg?2">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner2_12.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_13.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_14.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_15.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_16.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_17.jpg?2">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner2_18.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_19.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_20.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_21.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_22.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_23.jpg?3">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_24.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_25.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_26.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_27.jpg?2">
-                    <img src="//img1.zuipin.cn/img/cms/20161124zs/banner2_27.jpg?2">
-                    <img src="//img2.zuipin.cn/img/cms/20161124zs/banner2_28.jpg?2">
-                    <img src="//img3.zuipin.cn/img/cms/20161124zs/banner2_29.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_30.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_31.jpg?2">
-                    <img src="//img4.zuipin.cn/img/cms/20161124zs/banner2_32.jpg?2">
-                    <img src="//img0.zuipin.cn/img/cms/20161124zs/banner2_33.jpg?2">
-                </div>
-
-
-
-                <!--右导航开始-->
-                <div class="rightx rightx_left" id="right">
-                    <a href="javascript:;" class="rightxa1" style="top:88px;" rel="qj00" target="_self"></a>
-                    <a class="close" style=""></a>
-                </div>
-                <!--右导航结束-->
-            </div>
-            <!-- 报名 -->
-            <form action="//www.zuipin.cn/customer/quiz/zscollect" method="post" id="sub-form" class="btn_list img_fl nice-validator n-yellow" data-validator-option="{theme:'yellow_right_effect',stopOnError:true}" novalidate="novalidate">
-                <div class="in">
-                    <input placeholder="姓名" type="text" name="customername" id="customername" data-rule="" data-tip="">
-                </div>
-                <div class="in">
-                    <input placeholder="电话" type="text" name="mobile" id="mobile" data-rule="" data-tip="">
-                </div>
-                <div class="in" style="margin:0;">
-                    <input placeholder="所在城市" type="text" name="address" id="address" data-rule="" data-tip="">
-                </div>
-                <div class="clear"></div>
-                <div class="in_textarea">
-                    <span></span>
-                    <textarea placeholder="留言" name="comment" id="message" rows="7"></textarea>
-                    <input type="hidden" value="pc" name="source">
-                </div>
-                <button class="btn" type="submit" id="subbtn">提交申请</button>
-            </form>
-        </div>
-</div>
-            </div>
-        </div>
-        <div id="user_loading" style="display:none;"><div class="user_loading">加载中...，请稍等！</div></div>
-
-        <script>
-            $(function(){
-                Carousel.init($(".J_Poster"));
-                var mySwiper = new Swiper ('.swiper-container', {
-                    loop: true,
-                    // 如果需要分页器
-                    pagination: '.swiper-pagination',
-                    paginationClickable :true,
-                   autoplay:3000
-                })
-            })
-
-            $(document).ready(function(){
-                $("#sub-form").validate();
-                $('.btn').click(function(){
-                    if ($('#mobile').val()==''){
-                        VE.box('温馨提示','请输入联系方式，方便尽快与您取得联系');
-                        return false;
-                    }
-                });
-
-                var $ok = parseInt(getCookie('success'));
-                if($ok === 999){
-                    VE.box('温馨提示','招商经理会尽快与您联系，注意接听区号为0592开头的座机电话，祝您生活愉快！');
-                    setCookie('success',1,10);
-                }
-
-                $("#sub-form").submit(function(){
-                    setCookie('success',999,3600);
-                });
-
-
-                $(".rightx_right .close").click(function(){ $(".rightx_right").fadeOut('fast');});
-                $(".rightx_left .close").click(function(){ $(".rightx_left").fadeOut('fast');});
-                var moveXXX = function(){
-                    var myTop = $(window).scrollTop();
-                    if(myTop >=300){
-                        $('.rightx_right').addClass("rightx_hover");
-                        $('.rightx_left').addClass("rightx_hover");
-                    }
-                    if(myTop <=300){
-                        $('.rightx_right').removeClass("rightx_hover");
-                        $('.rightx_left').removeClass("rightx_hover");
-                    }};
-                $(window).bind("scroll", moveXXX);
-            });
-
-            $(function(){
-                //秒杀点击商城定位
-                $(".top_nav a").click(function () {
-                    var l = $(this).attr('rel');
-                    $("html,body").animate({scrollTop: $("#" + l).offset().top}, 500);
-                })
-            })
-
-
-            function setCookie(c_name,value,expiredays)
-            {
-                var exdate=new Date();
-                exdate.setDate(exdate.getDate()+expiredays);
-                document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
-            }
-
-            function getCookie(c_name)
-            {
-                if (document.cookie.length>0)
-                {
-                    c_start=document.cookie.indexOf(c_name + "=");
-                    if (c_start!=-1)
-                    {
-                        c_start=c_start + c_name.length+1;
-                        c_end=document.cookie.indexOf(";",c_start);
-                        if (c_end==-1)
-                            c_end=document.cookie.length;
-                        return unescape(document.cookie.substring(c_start,c_end));
-                    }
-                }
-                return "";
-            }
-
-            function resetClick(){
-                flag=1;
-                $.unblockUI();
-            }
-
-        </script>
-
-</div>
-
-</div>
-
-</div>
 <!--购物车结束-->
 <del></del>
 <!----------start home_column2----------------->

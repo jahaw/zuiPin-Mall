@@ -1,308 +1,367 @@
 /**
  * Created by Administrator on 2017/2/14 0014.
  */
-$(function () {
-    $('.goods_li').hover(function () {
-        $(".divStart").eq($(this).index()).css("borderColor","#423e3e");
-    },
-    function () {
-        $(".divStart").eq($(this).index()).css("borderColor","#ffffff");
-    }
-    );
 
-    //鼠标移入显示二级菜单
+function sveInfo(){
+    alert("a");
+}
+sveInfo(); $(function () {
+     $('.goods_li').hover(function () {
+         $(".divStart").eq($(this).index()).css("borderColor","#423e3e");
+     },
+     function () {
+         $(".divStart").eq($(this).index()).css("borderColor","#ffffff");
+     }
+     );
 
-    $('#popnav').mouseenter(function () {
-        $('.nav_details').show();
-        $('.sn_nav').show();
-    });
-    $('#popnav').mouseleave(function () {
-        $('.nav_details').hide();
-        $('.sn_nav').hide();
-    });
-    //  实现放大镜的效果
+     //鼠标移入显示二级菜单
 
+     $('#popnav').mouseenter(function () {
+         $('.nav_details').show();
+         // $('.sn_nav').show();
+     });
+     $('#popnav').mouseleave(function () {
+         $('.nav_details').hide();
+         // $('.sn_nav').hide();
+     });
+     //  实现放大镜的效果
 
 
 
-    $(document).ready(function(){
 
-        // 图片上下滚动
+     $(document).ready(function(){
 
-        var count = $("#imageMenu li").length - 5; /* 显示 6 个 li标签内容 */
+         // 图片上下滚动
 
-        var interval = $("#imageMenu li:first").width();
+         var count = $("#imageMenu li").length - 5; /* 显示 6 个 li标签内容 */
 
-        var curIndex = 0;
+         var interval = $("#imageMenu li:first").width();
 
+         var curIndex = 0;
 
 
-        $('.scrollbutton').click(function(){
 
-            if( $(this).hasClass('disabled') ) return false;
+         $('.scrollbutton').click(function(){
 
+             if( $(this).hasClass('disabled') ) return false;
 
 
-            if ($(this).hasClass('smallImgUp')) --curIndex;
 
-            else ++curIndex;
+             if ($(this).hasClass('smallImgUp')) --curIndex;
 
+             else ++curIndex;
 
 
-            $('.scrollbutton').removeClass('disabled');
 
-            if (curIndex == 0) $('.smallImgUp').addClass('disabled');
+             $('.scrollbutton').removeClass('disabled');
 
-            if (curIndex == count-1) $('.smallImgDown').addClass('disabled');
+             if (curIndex == 0) $('.smallImgUp').addClass('disabled');
 
+             if (curIndex == count-1) $('.smallImgDown').addClass('disabled');
 
 
-            $("#imageMenu ul").stop(false, true).animate({"marginLeft" : -curIndex*interval + "px"}, 600);
 
-        });
+             $("#imageMenu ul").stop(false, true).animate({"marginLeft" : -curIndex*interval + "px"}, 600);
 
-        // 解决 ie6 select框 问题
+         });
 
-        $.fn.decorateIframe = function(options) {
+         // 解决 ie6 select框 问题
 
-            if ($.browser.msie && $.browser.version < 7) {
+         $.fn.decorateIframe = function(options) {
 
-                var opts = $.extend({}, $.fn.decorateIframe.defaults, options);
+             if ($.browser.msie && $.browser.version < 7) {
 
-                $(this).each(function() {
+                 var opts = $.extend({}, $.fn.decorateIframe.defaults, options);
 
-                    var $myThis = $(this);
+                 $(this).each(function() {
 
-                    //创建一个IFRAME
+                     var $myThis = $(this);
 
-                    var divIframe = $("<iframe />");
+                     //创建一个IFRAME
 
-                    divIframe.attr("id", opts.iframeId);
+                     var divIframe = $("<iframe />");
 
-                    divIframe.css("position", "absolute");
+                     divIframe.attr("id", opts.iframeId);
 
-                    divIframe.css("display", "none");
+                     divIframe.css("position", "absolute");
 
-                    divIframe.css("display", "block");
+                     divIframe.css("display", "none");
 
-                    divIframe.css("z-index", opts.iframeZIndex);
+                     divIframe.css("display", "block");
 
-                    divIframe.css("border");
+                     divIframe.css("z-index", opts.iframeZIndex);
 
-                    divIframe.css("top", "0");
+                     divIframe.css("border");
 
-                    divIframe.css("left", "0");
+                     divIframe.css("top", "0");
 
-                    if (opts.width == 0) {
+                     divIframe.css("left", "0");
 
-                        divIframe.css("width", $myThis.width() + parseInt($myThis.css("padding")) * 2 + "px");
+                     if (opts.width == 0) {
 
-                    }
+                         divIframe.css("width", $myThis.width() + parseInt($myThis.css("padding")) * 2 + "px");
 
-                    if (opts.height == 0) {
+                     }
 
-                        divIframe.css("height", $myThis.height() + parseInt($myThis.css("padding")) * 2 + "px");
+                     if (opts.height == 0) {
 
-                    }
+                         divIframe.css("height", $myThis.height() + parseInt($myThis.css("padding")) * 2 + "px");
 
-                    divIframe.css("filter", "mask(color=#fff)");
+                     }
 
-                    $myThis.append(divIframe);
+                     divIframe.css("filter", "mask(color=#fff)");
 
-                });
+                     $myThis.append(divIframe);
 
-            }
+                 });
 
-        }
+             }
 
-        $.fn.decorateIframe.defaults = {
+         }
 
-            iframeId: "decorateIframe1",
+         $.fn.decorateIframe.defaults = {
 
-            iframeZIndex: -1,
+             iframeId: "decorateIframe1",
 
-            width: 0,
+             iframeZIndex: -1,
 
-            height: 0
+             width: 0,
 
-        }
+             height: 0
 
-        //放大镜视窗
+         }
 
-        $("#bigView").decorateIframe();
+         //放大镜视窗
 
-        //点击到中图
+         $("#bigView").decorateIframe();
 
-        var midChangeHandler = null;
+         //点击到中图
 
+         var midChangeHandler = null;
 
 
-        $("#imageMenu li img").bind("click", function(){
 
-            if ($(this).attr("id") != "onlickImg") {
+         $("#imageMenu li img").bind("click", function(){
 
-                midChange($(this).attr("src").replace("small", "mid"));
+             if ($(this).attr("id") != "onlickImg") {
 
-                $("#imageMenu li").removeAttr("id");
+                 midChange($(this).attr("src").replace("small", "mid"));
 
-                $(this).parent().attr("id", "onlickImg");
+                 $("#imageMenu li").removeAttr("id");
 
-            }
+                 $(this).parent().attr("id", "onlickImg");
 
-        }).bind("mouseover", function(){
+             }
 
-            if ($(this).attr("id") != "onlickImg") {
+         }).bind("mouseover", function(){
 
-                window.clearTimeout(midChangeHandler);
+             if ($(this).attr("id") != "onlickImg") {
 
-                midChange($(this).attr("src").replace("small", "mid"));
+                 window.clearTimeout(midChangeHandler);
 
-                $(this).css({ "border": "3px solid #959595" });
+                 midChange($(this).attr("src").replace("small", "mid"));
 
-            }
+                 $(this).css({ "border": "3px solid #959595" });
 
-        }).bind("mouseout", function(){
+             }
 
-            if($(this).attr("id") != "onlickImg"){
+         }).bind("mouseout", function(){
 
-                $(this).removeAttr("style");
+             if($(this).attr("id") != "onlickImg"){
 
-                midChangeHandler = window.setTimeout(function(){
+                 $(this).removeAttr("style");
 
-                    midChange($("#onlickImg img").attr("src").replace("small", "mid"));
+                 midChangeHandler = window.setTimeout(function(){
 
-                }, 1000);
+                     midChange($("#onlickImg img").attr("src").replace("small", "mid"));
 
-            }
+                 }, 1000);
 
-        });
+             }
 
-        function midChange(src) {
+         });
 
-            $("#midimg").attr("src", src).load(function() {
+         function midChange(src) {
 
-                changeViewImg();
+             $("#midimg").attr("src", src).load(function() {
 
-            });
+                 changeViewImg();
 
-        }
+             });
 
-        //大视窗看图
+         }
 
-        function mouseover(e) {
+         //大视窗看图
 
-            if ($("#winSelector").css("display") == "none") {
+         function mouseover(e) {
 
-                $("#winSelector,#bigView").show();
+             if ($("#winSelector").css("display") == "none") {
 
-            }
+                 $("#winSelector,#bigView").show();
 
-            $("#winSelector").css(fixedPosition(e));
+             }
 
-            e.stopPropagation();
+             $("#winSelector").css(fixedPosition(e));
 
-        }
+             e.stopPropagation();
 
-        function mouseOut(e) {
+         }
 
-            if ($("#winSelector").css("display") != "none") {
+         function mouseOut(e) {
 
-                $("#winSelector,#bigView").hide();
+             if ($("#winSelector").css("display") != "none") {
 
-            }
+                 $("#winSelector,#bigView").hide();
 
-            e.stopPropagation();
+             }
 
-        }
+             e.stopPropagation();
 
-        $("#midimg").mouseover(mouseover); //中图事件
+         }
 
-        $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
+         $("#midimg").mouseover(mouseover); //中图事件
 
+         $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
 
 
-        var $divWidth = $("#winSelector").width(); //选择器宽度      235px
 
-        var $divHeight = $("#winSelector").height(); //选择器高度            210px
+         var $divWidth = $("#winSelector").width(); //选择器宽度      235px
 
-        var $imgWidth = $("#midimg").width(); //中图宽度        400
+         var $divHeight = $("#winSelector").height(); //选择器高度            210px
 
-        var $imgHeight = $("#midimg").height(); //中图高度      400
+         var $imgWidth = $("#midimg").width(); //中图宽度        400
 
-        var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
+         var $imgHeight = $("#midimg").height(); //中图高度      400
 
+         var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
 
 
-        function changeViewImg() {
 
-            $("#bigView img").attr("src", $("#midimg").attr("src").replace("mid", "big"));
+         function changeViewImg() {
 
-        }
+             $("#bigView img").attr("src", $("#midimg").attr("src").replace("mid", "big"));
 
-        changeViewImg();
+         }
 
-        $("#bigView").scrollLeft(0).scrollTop(0);
+         changeViewImg();
 
-        function fixedPosition(e) {
+         $("#bigView").scrollLeft(0).scrollTop(0);
 
-            if (e == null) {
+         function fixedPosition(e) {
 
-                return;
+             if (e == null) {
 
-            }
+                 return;
 
-            var $imgLeft = $("#midimg").offset().left; //中图左边距
+             }
 
-            var $imgTop = $("#midimg").offset().top; //中图上边距
+             var $imgLeft = $("#midimg").offset().left; //中图左边距
 
-            X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
+             var $imgTop = $("#midimg").offset().top; //中图上边距
 
-            Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
+             X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
 
-            X = X < 0 ? 0 : X;
+             Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
 
-            Y = Y < 0 ? 0 : Y;
+             X = X < 0 ? 0 : X;
 
-            X = X + $divWidth > $imgWidth ? $imgWidth - $divWidth : X;
+             Y = Y < 0 ? 0 : Y;
 
-            Y = Y + $divHeight > $imgHeight ? $imgHeight - $divHeight : Y;
+             X = X + $divWidth > $imgWidth ? $imgWidth - $divWidth : X;
 
+             Y = Y + $divHeight > $imgHeight ? $imgHeight - $divHeight : Y;
 
 
-            if ($viewImgWidth == null) {
 
-                $viewImgWidth = $("#bigView img").outerWidth();
+             if ($viewImgWidth == null) {
 
-                $viewImgHeight = $("#bigView img").height();
+                 $viewImgWidth = $("#bigView img").outerWidth();
 
-                if ($viewImgWidth < 200 || $viewImgHeight < 200) {
+                 $viewImgHeight = $("#bigView img").height();
 
-                    $viewImgWidth = $viewImgHeight = 800;
+                 if ($viewImgWidth < 200 || $viewImgHeight < 200) {
 
-                }
+                     $viewImgWidth = $viewImgHeight = 800;
 
-                $height = $divHeight * $viewImgHeight / $imgHeight;
+                 }
 
-                $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
+                 $height = $divHeight * $viewImgHeight / $imgHeight;
 
-                $("#bigView").height($height);
+                 $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
 
-            }
+                 $("#bigView").height($height);
 
-            var scrollX = X * $viewImgWidth / $imgWidth;
+             }
 
-            var scrollY = Y * $viewImgHeight / $imgHeight;
+             var scrollX = X * $viewImgWidth / $imgWidth;
 
-            $("#bigView img").css({ "left": scrollX * -1, "top": scrollY * -1 });
+             var scrollY = Y * $viewImgHeight / $imgHeight;
 
-            $("#bigView").css({ "top": 75, "left": $(".preview").offset().left + $(".preview").width() + 15 });
+             $("#bigView img").css({ "left": scrollX * -1, "top": scrollY * -1 });
 
-            return { left: X, top: Y };
+             $("#bigView").css({ "top": 75, "left": $(".preview").offset().left + $(".preview").width() + 15 });
 
-        }
+             return { left: X, top: Y };
 
-    });
+         }
 
+     });
+ //
+     //后台获取商品信息并在购物车显示
 
+     $(function () {
+         //点击按钮的时候存储有关商品的信息,跳转购物车时读取cookie并显示在页面中。
+         /**
+          * 商品名声、单价、数量、小计
+          */
+         // $('#cart').click(function () {
+             // 数量
+             // console.log("a");
+             // var a=$('.pro_detail dt:last').text();
+             // console.log(a);
+             //单价
+             // var b=$('.detail_zffs').val();
+             // console.log(b);
+             //小计=数量*单价
+             // var c=a*b;
+             // console.log(c);
+             //商品名称
+             // var d=$('.pro_detail:first h1').text();
+             // console.log(d);
+             // var sendData={"gName":d,"gPrice":b,"gCount":a,"gPriceTotal":c};
+             // $.cookie( "gName" , $("#mobile").val()  , { path: '/', expires: 7 });
+             //向服务器发送请求，储存数据。
 
-});
+             /* $.ajax({
+              type:"post",
+              url:"../php/shoppingCar.php",
+              async:true,
+              data:sendData,
+              error:function(XMLHttpRequest, textStatus, errorThrown){
+              alert(errorThrown);
+              },
+              success:function(data){
+              var data=eval('('+data+')');
+              console.log(data);
+              var html="";
+              for(var i=0;i<data.length;i++){
+              // console.log(data.gImg);
+              html+='<li class="goods_li"><div class="goods_box divStart"><div'+ 'class="pro_img"><span><a href="###"><img src="'+data[i].gImg+'"/></a></span><span class="pro_lab lab12"></span></div><div class="pro_name"><a href="###">'+data[i].gName+'</a></div><div class="pro_li"><label class="red">'+data[i].gEvaluate+'</label></div><div'+ 'class="pro_li"><label class="m_price">'+data[i].gMarkting+'</label><label class="zp_price">'+data[i].gPrice+'</label><del></del><div class="pro_li"><label class="p_left">'+data[i].evlAmount+'</label><label class="p_right">'+data[i].gKg+'</label><del></del></div></li>';
+              };
+              $('.all_products').html(html);
+
+              }
+              });*/
+
+
+
+
+
+
+
+
+         // })
+     })
+
+
+ });

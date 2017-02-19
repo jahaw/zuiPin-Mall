@@ -20,6 +20,55 @@ $(document).ready(function(){
         location.href="index.html";
     //    存在问题：点击数据之后应该从新加载页面！！！
     });
+    //输入内容进行数据查找
+    function showData (data) {
+        // var oUl=document.getElementById("ul1");
+        // $('.drop')
+        var html='';
+        for(var i=0;i<data.s.length;i++){
+            if(data.s.length){
+                // oUl.style.display="block";
+                $('#drop').show();
+                html+='<li><a href="http://www.baidu.com/s?wd='+data.s[i]+'">'+data.s[i]+'</a></li>';
+                // oUl.innerHTML=html;
+                $('#drop').html(html);
+            }
+            else{//无相关信息后隐藏oUl.
+                // oUl.style.display="none";
+                $('#drop').hide();
+            }
+        }
+    }
+    $(function () {
+        $('.search_input').keyup(function () {
+            if(this.val()!=''){
+                var oScript=document.createElement('script');
+                oScript.src="http://suggestion.baidu.com/su?wd="+this.value+"&cb=showData";
+                document.body.appendChild(oScript);
+            }else{
+                $('#drop').hide();
+            }
+        });
+        $('.search_button').click(function () {
+            window.open("http://www.baidu.com/s?wd="+$('.search_input').val());
+        });
+        window.document.onkeydown = disableRefresh;
+        function disableRefresh(evt){
+            evt = (evt) ? evt : window.event
+            if (evt.keyCode) {
+                if(evt.keyCode == 13){
+                    window.open("http://www.baidu.com/s?wd="+$('.search_input').val());
+                }
+            }
+        }
+
+
+    })
+
+
+
+
+
 
 
     //  下拉列表

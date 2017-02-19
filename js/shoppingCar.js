@@ -186,58 +186,7 @@ window.onload = function () {
     checkAllInputs[0].checked = true;
     checkAllInputs[0].onclick();
 };
-$(function () {
-    //点击按钮的时候存储有关商品的信息,跳转购物车时读取cookie并显示在页面中。
-    /**
-     * 商品名声、单价、数量、小计
-     */
-    $('.cart').click(function () {
-        // 数量
-        var a=$('#qty').val();
-        console.log(a);
-        //单价
-        var b=$('.detail_zffs').val();
-        console.log(b);
-        //小计=数量*单价
-        var c=a*b;
-        console.log(c);
-        //商品名称
-        var d=$('.pro_detail:first h1').text();
-        console.log(d);
-        var sendData={"gName":d,"gPrice":b,"gCount":a,"gPriceTotal":c};
-         // $.cookie( "gName" , $("#mobile").val()  , { path: '/', expires: 7 });
-        //向服务器发送请求，储存数据。
 
-        $.ajax({
-            type:"post",
-            url:"../php/shoppingCar.php",
-            async:true,
-            data:sendData,
-            error:function(XMLHttpRequest, textStatus, errorThrown){
-                alert(errorThrown);
-            },
-            success:function(data){
-                var data=eval('('+data+')');
-                console.log(data);
-                var html="";
-                for(var i=0;i<data.length;i++){
-                    // console.log(data.gImg);
-                    html+='<li class="goods_li"><div class="goods_box divStart"><div'+ 'class="pro_img"><span><a href="###"><img src="'+data[i].gImg+'"/></a></span><span class="pro_lab lab12"></span></div><div class="pro_name"><a href="###">'+data[i].gName+'</a></div><div class="pro_li"><label class="red">'+data[i].gEvaluate+'</label></div><div'+ 'class="pro_li"><label class="m_price">'+data[i].gMarkting+'</label><label class="zp_price">'+data[i].gPrice+'</label><del></del><div class="pro_li"><label class="p_left">'+data[i].evlAmount+'</label><label class="p_right">'+data[i].gKg+'</label><del></del></div></li>';
-                };
-                $('.all_products').html(html);
-
-            }
-        });
-
-
-
-
-
-
-
-
-    })
-})
 
 
 

@@ -17,9 +17,9 @@
     <script src="../js/index.js"></script>
     <script src="../js/slide.js"></script>
     <script src="../js/nav.js"></script>
-    <script src="../js/goodsDetails.js"></script>
     <script src="../js/jquery.cookie.js"></script>
     <script src="../js/readCookie.js"></script>
+    <script src="../js/goodsDetails.js"></script>
 </head>
 <body>
 <!-----------------------nav开始----------------------------->
@@ -929,21 +929,22 @@
                         <dd class="detail_zffs">支付方式：货到付款<span>|</span>网银在线<span>|</span>支付宝<span>|</span>转账汇款</dd>
                         <dd class="pro_cart_info">
                             <form method="post" id="product_addtocart_form">
-                            <fieldset style="display:none;">
-                                    <input type="hidden" name="product" value="2781">
-                                    <input type="hidden" name="related_product" id="related-products-field" value="">
-                                    <input type="hidden" name="view_utm_source" id="view_utm_source" value="zuipin">
-                                    <input type="hidden" name="view_utm_medium" id="view_utm_medium" value="page">
-                                    <input type="hidden" name="view_utm_campaign" id="view_utm_campaign" value="tieguanyin">
-                                    <input type="hidden" name="utm_cms_source" id="utm_cms_source" value="">
-                            </fieldset>
+                                <fieldset style="display:none;">
+                                        <input type="hidden" name="product" value="2781">
+                                        <input type="hidden" name="related_product" id="related-products-field" value="">
+                                        <input type="hidden" name="view_utm_source" id="view_utm_source" value="zuipin">
+                                        <input type="hidden" name="view_utm_medium" id="view_utm_medium" value="page">
+                                        <input type="hidden" name="view_utm_campaign" id="view_utm_campaign" value="tieguanyin">
+                                        <input type="hidden" name="utm_cms_source" id="utm_cms_source" value="">
+                                </fieldset>
                                 <div>
                                     <label>我要买：<input name="qty" type="text" class="detail_qty" id="qty" maxlength="3" onkeydown="onlyNum();" onkeyup="showIntegral()" value="1">件</label>
                                     <label>您将获得<span class="brown" id="j2t-pts">259</span>积分.</label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input name="" type="image" class="cart" src="../images/add-cart.jpg">
+                                        <!--<input name="" type="image" class="cart" src="../images/add-cart.jpg">-->
+                                        <input name="" type="button" id="cart" style="width:150px;height:37px;background: url(../images/add-cart.jpg)no-repeat left center;" onclick="saveInfo()">
                                     </label>
                                     <label>
                                         <a rel="nofollow" href="###">
