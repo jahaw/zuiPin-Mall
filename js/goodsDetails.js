@@ -314,22 +314,12 @@
          //点击按钮的时候存储有关商品的信息,跳转购物车时读取cookie并显示在页面中。
          /**
           * 商品名声、单价、数量、小计
-          *     $('#product_addtocart_form #cart123').click(
-                                                    function(){
-                                                    alert("a");
-                                                }
-                                                );
-          *
-          *
-          *
-          *
-          *
           *
           *
           */
            $('#product_addtocart_form #cart123').click(function () {
              // 商品名称
-              var a=$('.pro_detail dt:first').text();
+              var a=$('.pro_detail dd:first .detail_col').text();
               console.log(a);
                //商品数量
                var d=$('#qty').val();
@@ -343,8 +333,8 @@
                //点击图片的的路径。
                var e=$('#vertical img').attr("src");
                console.log(e);
-               var sendData={"gName":d,"gImg":e,"gPrice":b,"gCount":a,"gPriceTotal":c};
-               console.log(sendData);
+               // var sendData={"gName":d,"gImg":e,"gPrice":b,"gCount":a,"gPriceTotal":c};
+               // console.log(sendData);
              //  将数据发送到数据库中。
              //  $.cookie( "gName" , $("#mobile").val()  , { path: '/', expires: 7 });
              //向服务器发送请求，储存数据。
@@ -353,20 +343,14 @@
               type:"post",
               url:"../php/shoppingCar.php",
               async:true,
-              data:sendData,
+              data:{"gName":a,"gImg":e,"gPrice":b,"gCount":d,"gPriceTotal":c},
               error:function(XMLHttpRequest, textStatus, errorThrown){
-              alert(errorThrown);
+                alert(errorThrown);
               },
               success:function(data){
               var data=eval('('+data+')');
               console.log(data);
-              /*var html="";
-              for(var i=0;i<data.length;i++){
-              // console.log(data.gImg);
-              html+='<li class="goods_li"><div class="goods_box divStart"><div'+ 'class="pro_img"><span><a href="###"><img src="'+data[i].gImg+'"/></a></span><span class="pro_lab lab12"></span></div><div class="pro_name"><a href="###">'+data[i].gName+'</a></div><div class="pro_li"><label class="red">'+data[i].gEvaluate+'</label></div><div'+ 'class="pro_li"><label class="m_price">'+data[i].gMarkting+'</label><label class="zp_price">'+data[i].gPrice+'</label><del></del><div class="pro_li"><label class="p_left">'+data[i].evlAmount+'</label><label class="p_right">'+data[i].gKg+'</label><del></del></div></li>';
-              };
-              $('.all_products').html(html);*/
-
+              location.href="shoppingCar.html";
               }
                });
           })
