@@ -31,6 +31,7 @@
                         <li class="loca_item">
                             <span></span>
                             <div><ul><li><em value="100">全国</em></li></ul></div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>A-C</span>
@@ -42,6 +43,7 @@
                                     <li><em value="333">重庆</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>F-H</span>
@@ -60,6 +62,7 @@
                                     <li><em value="329">湖南</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>J-N</span>
@@ -73,6 +76,7 @@
                                     <li><em value="341">宁夏</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>Q-T</span>
@@ -88,6 +92,7 @@
                                     <li><em value="313">天津</em></li>
                                 </ul>
                             </div>
+                            <div class="clear"></div>
                         </li>
                         <li class="loca_item">
                             <span>X-Z</span>
@@ -829,39 +834,8 @@
         <th>操作</th>
     </tr>
     </thead>
-    <tbody>
-    <tr>
-        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-        <td class="goods"><img src="../images/lj.jpg" alt="" style="width:80px;height:80px;"/><span>龙井 QLJ3000-100g</span></td>
-        <td class="price">258</td>
-        <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
-        <td class="subtotal">258</td>
-        <td class="operation"><span class="delete">删除</span></td>
-    </tr>
-    <tr>
-        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-        <td class="goods"><img src="../images/lj1.jpg" alt="" style="width:80px;height:80px;"/><span>朴茶龙井 QLJ2600-150g</span></td>
-        <td class="price">125</td>
-        <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
-        <td class="subtotal">125</td>
-        <td class="operation"><span class="delete">删除</span></td>
-    </tr>
-    <tr>
-        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-        <td class="goods"><img src="../images/lj.jpg" alt="" style="width:80px;height:80px;"/><span>龙井 QLJ3000-100g</span></td>
-        <td class="price">258</td>
-        <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
-        <td class="subtotal">258</td>
-        <td class="operation"><span class="delete">删除</span></td>
-    </tr>
-    <tr>
-        <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
-        <td class="goods"><img src="../images/lj1.jpg" alt="" style="width:80px;height:80px;"/><span>朴茶龙井 QLJ2600-150g</span></td>
-        <td class="price">125</td>
-        <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
-        <td class="subtotal">125</td>
-        <td class="operation"><span class="delete">删除</span></td>
-    </tr>
+    <tbody id="tby">
+
     </tbody>
 </table>
 <div class="foot" id="foot">
@@ -872,16 +846,15 @@
     <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
     <div class="selected-view">
         <div id="selectedViewList" class="clearfix">
-            <div><img src="images/1.jpg"><span>取消选择</span></div>
+            <div><!--<img src="../images/1.jpg">--><span>取消选择</span></div>
         </div>
         <span class="arrow">◆<span>◆</span></span>
     </div>
 </div>
 
 </div>
-
-</div>
 <!--购物车结束-->
+</div>
 <del></del>
 <!----------start home_column2----------------->
 <div class="help">

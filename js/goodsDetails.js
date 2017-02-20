@@ -1,11 +1,7 @@
 /**
  * Created by Administrator on 2017/2/14 0014.
  */
-
-function sveInfo(){
-    alert("a");
-}
-sveInfo(); $(function () {
+ $(function () {
      $('.goods_li').hover(function () {
          $(".divStart").eq($(this).index()).css("borderColor","#423e3e");
      },
@@ -18,17 +14,22 @@ sveInfo(); $(function () {
 
      $('#popnav').mouseenter(function () {
          $('.nav_details').show();
-         // $('.sn_nav').show();
+          $('.sn_nav').show();
      });
      $('#popnav').mouseleave(function () {
          $('.nav_details').hide();
-         // $('.sn_nav').hide();
+          $('.sn_nav').hide();
      });
+     // 给按钮增加一个点击事件，存储信息。
+     function svInfo() {
+         console.log("a");
+     }
+
+
+
+
+
      //  实现放大镜的效果
-
-
-
-
      $(document).ready(function(){
 
          // 图片上下滚动
@@ -313,26 +314,42 @@ sveInfo(); $(function () {
          //点击按钮的时候存储有关商品的信息,跳转购物车时读取cookie并显示在页面中。
          /**
           * 商品名声、单价、数量、小计
+          *     $('#product_addtocart_form #cart123').click(
+                                                    function(){
+                                                    alert("a");
+                                                }
+                                                );
+          *
+          *
+          *
+          *
+          *
+          *
+          *
           */
-         // $('#cart').click(function () {
-             // 数量
-             // console.log("a");
-             // var a=$('.pro_detail dt:last').text();
-             // console.log(a);
+           $('#product_addtocart_form #cart123').click(function () {
+             // 商品名称
+              var a=$('.pro_detail dt:first').text();
+              console.log(a);
+               //商品数量
+               var d=$('#qty').val();
+               console.log(d);
              //单价
-             // var b=$('.detail_zffs').val();
-             // console.log(b);
+             var b=$('.detail_price').text();
+             console.log(b);
              //小计=数量*单价
-             // var c=a*b;
-             // console.log(c);
-             //商品名称
-             // var d=$('.pro_detail:first h1').text();
-             // console.log(d);
-             // var sendData={"gName":d,"gPrice":b,"gCount":a,"gPriceTotal":c};
-             // $.cookie( "gName" , $("#mobile").val()  , { path: '/', expires: 7 });
+               var c=b*d;
+               console.log(c);
+               //点击图片的的路径。
+               var e=$('#vertical img').attr("src");
+               console.log(e);
+               var sendData={"gName":d,"gImg":e,"gPrice":b,"gCount":a,"gPriceTotal":c};
+               console.log(sendData);
+             //  将数据发送到数据库中。
+             //  $.cookie( "gName" , $("#mobile").val()  , { path: '/', expires: 7 });
              //向服务器发送请求，储存数据。
 
-             /* $.ajax({
+              $.ajax({
               type:"post",
               url:"../php/shoppingCar.php",
               async:true,
@@ -343,24 +360,16 @@ sveInfo(); $(function () {
               success:function(data){
               var data=eval('('+data+')');
               console.log(data);
-              var html="";
+              /*var html="";
               for(var i=0;i<data.length;i++){
               // console.log(data.gImg);
               html+='<li class="goods_li"><div class="goods_box divStart"><div'+ 'class="pro_img"><span><a href="###"><img src="'+data[i].gImg+'"/></a></span><span class="pro_lab lab12"></span></div><div class="pro_name"><a href="###">'+data[i].gName+'</a></div><div class="pro_li"><label class="red">'+data[i].gEvaluate+'</label></div><div'+ 'class="pro_li"><label class="m_price">'+data[i].gMarkting+'</label><label class="zp_price">'+data[i].gPrice+'</label><del></del><div class="pro_li"><label class="p_left">'+data[i].evlAmount+'</label><label class="p_right">'+data[i].gKg+'</label><del></del></div></li>';
               };
-              $('.all_products').html(html);
+              $('.all_products').html(html);*/
 
               }
-              });*/
-
-
-
-
-
-
-
-
-         // })
+               });
+          })
      })
 
 

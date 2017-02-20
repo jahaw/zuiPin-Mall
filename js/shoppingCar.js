@@ -1,12 +1,56 @@
 /**
  * Created by an.han on 13-12-17.
  */
+    //页面打开时将商品信息加载到购物车列表中。
+
+    $.ajax({
+        type:"post",
+        url:"../php/appendTr.php",
+        async:true,
+        // data:sendData,
+        error:function(XMLHttpRequest, textStatus, errorThrown){
+            alert(errorThrown);
+        },
+        success:function(data){
+            var data=eval('('+data+')');
+            console.log(data);
+             console.log(data[0].gImg);
+
+            var html12="";
+            for(var i=0;i<data.length;i++){
+                html12+='<tr>'
+                            +'<td class="checkbox"><input class="check-one check" type="checkbox"/></td>'
+                            +'<td class="goods"><img src="'+data[i].gImg+'" alt="" style="width:80px;height:80px;"/><span>'+data[i].gName+'</span></td>'
+                            +'<td class="price">￥'+data[i].gPrice+'</td>'
+                            +'<td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>'
+                            +'<td class="subtotal">'+data[i].gCount+'</td>'
+                            //存在问题：商品数量的添加。
+                            +'<td class="operation"><span class="delete">删除</span></td>'
+                            +'</tr>';
+            };
+            console.log(html12);
+             $('#tby').html(html12);
+
+        window.onload=function () {
+
+        }
 
 
 
 
 
 
+
+
+
+
+
+        }
+    });
+
+
+
+//  对数据库逻辑处理部分。
 window.onload = function () {
     //鼠标移入显示二级菜单
 
@@ -20,7 +64,7 @@ window.onload = function () {
     });
 
 
-
+    //给ie6做兼容处理
     if (!document.getElementsByClassName) {
         document.getElementsByClassName = function (cls) {
             var ret = [];
@@ -34,7 +78,7 @@ window.onload = function () {
             return ret;
         }
     }
-
+    //开始选取元素。
     var table = document.getElementById('cartTable'); // 购物车表格
     var selectInputs = document.getElementsByClassName('check'); // 所有勾选框
     var checkAllInputs = document.getElementsByClassName('check-all') // 全选框
