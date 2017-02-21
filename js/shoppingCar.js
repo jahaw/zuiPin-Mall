@@ -32,9 +32,9 @@
                 html12+='<tr>'
                             +'<td class="checkbox"><input class="check-one check" type="checkbox"/></td>'
                             +'<td class="goods"><img src="'+data[i].gImg+'" alt="" style="width:80px;height:80px;"/><span>'+data[i].gName+'</span></td>'
-                            +'<td class="price">￥'+data[i].gPrice+'</td>'
+                            +'<td class="price">'+data[i].gPrice+'</td>'
                             +'<td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>'
-                            +'<td class="subtotal">'+data[i].gCount+'</td>'
+                            +'<td class="subtotal">'+data[i].gPriceTotal+'</td>'
                             //存在问题：商品数量的添加。
                             +'<td class="operation"><span class="delete">删除</span></td>'
                             +'</tr>';
@@ -103,7 +103,7 @@
                     var span = tr.getElementsByTagName('span')[1]; //-号
                     //写入HTML
                     subtotal.innerHTML = (parseInt(countInput.value) * parseFloat(price.innerHTML)).toFixed(2);
-                    //如果数目只有一个，把-号去掉
+                    //如果数目只有一个，把"-"号去掉
                     if (countInput.value == 1) {
                         span.innerHTML = '';
                     }else{
@@ -159,6 +159,7 @@
                         switch (cls) {
                             case 'add': //点击了加号
                                 countInout.value = value + 1;
+                                console.log("1");
                                 getSubtotal(this);
                                 break;
                             case 'reduce': //点击了减号
@@ -208,7 +209,6 @@
                     }
                     getTotal(); //更新总数
                 };
-
                 // 默认全选
                 checkAllInputs[0].checked = true;
                 checkAllInputs[0].onclick();
@@ -216,9 +216,36 @@
      }
     });
 
-
-
 //  对数据库逻辑处理部分。
+// $('#cartTable #tby').on("click",".count .add",function (){
+//     console.log("1");
+//     var A = $('.goods span').text();
+//     var B = $('.count-input').value();
+//     console.log(A);
+//     console.log(B);
+//     /*$.ajax({
+//      type: "post",
+//      url: "../php/update.php",
+//      async: true,
+//      data:{"gName":"商品编号：8683727","gCount":a},
+//      error: function (XMLHttpRequest, textStatus, errorThrown) {
+//      alert(errorThrown);
+//      },
+//      success: function (data) {
+//      var data = eval('(' + data + ')');
+//      console.log(data);
+//      console.log(data[0].gImg);
+//
+//      var html12 = "";
+//      for (var i = 0; i < data.length; i++) {
+//
+//      }
+//      ;
+//      console.log(html12);
+//      $('#tby').html(html12);
+//      }
+//      })*/
+// })
 
 
 
